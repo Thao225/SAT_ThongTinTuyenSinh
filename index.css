@@ -1,91 +1,90 @@
-/* .flex {
-    display : flex;
-    margin : 0 auto;
-} 
-.big {
-    width: 96%;
-    margin: 0 auto;
-    margin-top: 6rem;
-
-}
-.left {
-    width: 25%;
-    padding: 10px;
-    box-sizing: border-box;
-    color : white;
-
-}
-.right {
-    width: 75%;
-    background-color: white;
-}
-
-ul.menudoc {
-    list-style-type: none;
-    text-align: center;
-
-    padding: 0;
-}
-
-ul.menudoc > li > a {
-    text-decoration: none;
-    display: block;
-    color: white;
-    padding : 2rem;
-    text-align: center;
-}
-ul.menudoc > li > a:hover {
-    background-color: #b9a2d8;
-}
-div.menutuyensinh {
-   
-    padding : 0;
-    margin: 0;
-    background-color: #6237A0;
-
-    
-} 
-number {
-    font-size: 20px;
-}
-div.tieude {
-
-    padding : 2rem;
-    text-align : center;
-    margin : 0 auto;
-    width : 50%;
-    animation : doimau 1s infinite;
-    border-radius : 20px;
-}
-div.infos {
-    height : 200px;
-    width : 100%;
-    margin : 0 auto;
-    margin-left: 1%;
-}
-
-div.infos div.info {
-    border : 1px solid red;
-    padding : 2rem;
-    width : 30%;
-    box-sizing: border-box;
-    margin-left: 2%; 
-}
-
-@keyframes doimau {
-    0% { background-color: #FFB3BA; }  
-    33% { background-color: #FFDFBA; }
-    66% { background-color: #BAE1FF; }
-    100% { background-color: #FFB3BA; } 
-} */
-
 .flex {
     display : flex;
-    }
-    .left {
+    /* justify-content: center;
+    align-items: center;  */
+}
+.under {
+    padding-top : 64px;
+}
+/* ------Achivements------ */
+
+.achiev .icon {
+    width: 70%;
+    margin : 0 15%;
+}
+div.achiev {
+    flex : 1;
+    padding : 8px;
+    margin : 0 2rem;
+}
+div.achiev > p {
+    font-size : 14px;
+    text-align: center;
+}
+div.achiev svg:hover {
+    width: 80%;
+    margin : 0 10%;
+}
+
+/* ------Ảnh giới thiệu------ */
+.gioithieu img {
+    width : 100%;
+}
+
+
+/* ------Bố cục web------ */
+
+.left {
     width : 25%;
-    }
+    margin : 0 0 1rem 1rem;
+    border-right : 5px solid lightblue;
+    background-color: white;
+}
+ul.sub {
+    list-style-type: none;
+    background-color: white;
+    padding : 0;
+    margin : 0;
+}
+ul.sub > li > a {
+    display : block;
+    width : 100%;
+    padding : 10%;
+    box-sizing: border-box;
+    border-bottom : 0.5px solid gray;
+    text-decoration: none;
+    font-size: 1rem;
+    color : #31294C;
+}
+ul.sub > li > a:hover {
+    background-color : #D3A3DA;
+    font-weight: 700;
+}
+.right {
+    width : 75%;
+    margin : 0 1rem 1rem 0;
+    background-color: white;
+    /* margin-top : 6rem;
+    margin-right: 1rem; */
+}
+div.tieude {
+    /* background-color: #2c2c59; */
+    margin : 0;
+    padding : 2rem;
+}
+.tieude h1 {
+    text-align: center;
+    text-shadow: 2px 2px 10px #D3A3DA;
+    font-size: 2rem;
+    /* color : white; */
+}
 
-
-
-
+/* ------------ */
+footer {
+    width : 95%;
+    background-color: #8182DA;
+    padding : 2.5%;
+    margin : 0;
+    bottom : 0;
+    direction: inherit;
+}
