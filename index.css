@@ -79,7 +79,12 @@ div.infos div.info {
     100% { background-color: #FFB3BA; } 
 } */
 
-
+.flex {
+    display : flex;
+    }
+    .left {
+    width : 25%;
+    }
 
 
 
