@@ -6,6 +6,7 @@
     <title>Thông Tin Tuyển sinh</title>
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="index.css">
+    <script src = "index.js"></script>
 </head>
  
 <body>
@@ -59,49 +60,24 @@
     </div>
 </header>
 
-        <!-- <h2 style = "text-align: center;">Học bổng dành cho tân sinh viên :</h2>
-        <ul>
-            <h2>Điều kiện xét học bổng : </h2>
-            <li>Sinh viên trúng tuyển hệ đại học chính quy, đã xác nhận nhập học trên hệ thống của Bộ Giáo dục và Đào tạo </li>
-            <li> </li>
-            <li></li>
-        </ul> 
-        <h2>Thông tin học bổng </h2>
-        <ul>
-           
-            <li><number>03</number> suất thủ khoa tuyển sinh (theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL): 
-                Tân SV có điểm cao nhất toàn trường nhận học bổng toàn phần suốt 4 năm học, riêng năm nhất được nhận 200% học phí.</li>
-            <li><number>03</number> suất Á khoa tuyển sinh (theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL): 
-                Tân SV có điểm cao thứ nhì toàn trường nhận học bổng toàn phần suốt 4 năm học, riêng năm nhất được nhận 175% học phí.</li>
-            <li><number>147</number> suất học bổng Thủ khoa ngành (đã bao gồm các ngành của Chương trình chuẩn (đại trà) và chương trình Chất lượng cao) được xét tuyển theo theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL: 
-                Tân SV có điểm cao nhất mỗi ngành nhận học bổng toàn phần suốt 4 năm học, riêng năm nhất được nhận 150% học phí.</li>
-            <li><number>500</number> suất học bổng Khuyến khích học tập (theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL) 
-                học kỳ 1 năm nhất với mức học bổng 100% học phí (200 suất), 70% học phí (150 suất) và 50% học phí (150 suất).</li>
-            <li><number>200</number> suất học bổng hợp tác doanh nghiệp đối với các sinh viên ngành (Kỹ thuật tàu vũ trụ, Kỹ thuật tên lửa, Kỹ thuật vệ tinh, Robot học không gian, Trí tuệ nhân tạo, Hệ thông phần mềm, An ninh mạng trong không gian) </li>
-
-            <li><number>100</number> suất học bổng Khuyến khích nâng cao năng lực tiếng Anh dành cho sinh viên đạt kết quả cao trong các kỳ thi chứng chỉ đánh giá năng lực tiếng Anh quốc tế;
-                 trình độ IELTS 8.0 trở lên, TOEFL từ 800 trở lên, TOEIC từ 900 trở lên và các chứng chỉ tương đương - mỗi sinh viên được nhận từ 5.000.000 đến 50.000.000 đồng tùy theo trình độ tương ứng.</li>
-            <li>100 suất học bổng dành cho sinh viên liên kết từ các trường đại học trên thế giới</li>
-        </ul> -->
-
 <!-- ************************** -->
 <!-- Main web -->
 <div class = "under">
 <main class = "flex">
+<!-- LEFT -->
     <section class = "left">
         <div class = "thanhmenu">
             <ul class = "subs lstyle">
                 <li><a href = "#">Phương thức xét tuyển</a>
                     <ul class = "sub lstyle">
-
                         <li><a>Xét điểm học bạ</a></li>
                         <li><a>Xét điểm thi Đánh giá năng lực</a></li>
                         <li><a>Xét điểm thi Tốt nghiệp Trung học phổ thông</a></li>
                     </ul>
                 </li>
-                <li><a href = "#">Chương trình học bổng</a>
+                <li><a href = "#hocbong">Chương trình học bổng</a>
                     <ul class = "sub lstyle">
-                        <li><a>Dành cho tân sinh viên</a></li>
+                        <li><a href = "#hocbongtsv">Dành cho tân sinh viên</a></li>
                         <li><a>Các loại học bổng khác</a></li>
                     </ul></li>
                 <li><a href = "#">Chính sách miễn giảm</a></li>
@@ -114,9 +90,10 @@
             </ul>
         </div>
     </section>
+    <!-- RIGHT -->
     <section class = "right">
         <div class = "tieude">
-            <h1>Trang Thông Tin tuyển sinh đại học Vũ trụ và Công nghệ</h1>
+            <h1>Trang Thông Tin tuyển sinh đại học <br>Vũ trụ và Công nghệ</br></h1>
         </div>
         <div class = "gioithieu">
             <img src="img/PhiHanhGia.PNG" alt="Tầm nhìn và sứ mệnh">
@@ -142,7 +119,40 @@
                 <p>Quỹ học đa dạng với số lượng lớn, đặc biệt là Quỹ học bổng Tân sinh viên</p>
             </div>
         </div>
-        
+        <div class = "tieudephu under" id = "hocbong">
+            <h2>Chương trình học bổng đại học <br>Vũ trụ và Công nghệ</br></h1>
+            <p class = "mota">Học bổng là các khoản hỗ trợ tài chính được cấp cho sinh viên nhằm khuyến khích và hỗ trợ học tập. 
+                Chương trình học bổng thường được trao dựa trên nhiều tiêu chí khác nhau, bao gồm thành tích học tập, năng lực cá nhân, hoàn cảnh gia đình, hoặc sự cống hiến trong các hoạt động xã hội. 
+                Học bổng không chỉ giúp giảm bớt gánh nặng tài chính mà còn tạo động lực để sinh viên phấn đấu và phát triển toàn diện trong quá trình học tập.</p>
+        </div>
+        <div id = "hocbongtsv" class = "under" >
+            <h2>Học bổng dành cho tân sinh viên :</h2>
+        </div>
+        <p class = "mota">Điều kiện xét học bổng: </p>
+        <ul>
+            <li>Sinh viên trúng tuyển hệ đại học chính quy, đã xác nhận nhập học trên hệ thống của Bộ Giáo dục và Đào tạo </li>
+            <li>Sinh viên đạt điểm số cao với các hình thức xét tuyển : xét học bạ, điểm thi ĐGNL, điểm thi THPTQG</li>
+            <li>Sinh viên đã nộp đầy đủ hồ sơ yêu cầu theo thời gian quy định của trường.</li>
+        </ul> 
+        <h2>Thông tin học bổng </h2>
+        <a id = "more" href = "#">Xem thêm chi tiết ...</a>
+            <div class = "more">
+                <ul>
+                    <li><number>03</number> suất thủ khoa tuyển sinh (theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL): 
+                        Tân SV có điểm cao nhất toàn trường nhận học bổng toàn phần suốt 4 năm học, riêng năm nhất được nhận 200% học phí.</li>
+                    <li><number>03</number> suất Á khoa tuyển sinh (theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL): 
+                        Tân SV có điểm cao thứ nhì toàn trường nhận học bổng toàn phần suốt 4 năm học, riêng năm nhất được nhận 175% học phí.</li>
+                    <li><number>147</number> suất học bổng Thủ khoa ngành (đã bao gồm các ngành của Chương trình chuẩn (đại trà) và chương trình Chất lượng cao) được xét tuyển theo theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL: 
+                        Tân SV có điểm cao nhất mỗi ngành nhận học bổng toàn phần suốt 4 năm học, riêng năm nhất được nhận 150% học phí.</li>
+                    <li><number>500</number> suất học bổng Khuyến khích học tập (theo ba hình thức tuyển sinh Học bạ, Điểm thi THPT, Điểm thi ĐGNL) 
+                        học kỳ 1 năm nhất với mức học bổng 100% học phí (200 suất), 70% học phí (150 suất) và 50% học phí (150 suất).</li>
+                    <li><number>200</number> suất học bổng hợp tác doanh nghiệp đối với các sinh viên ngành (Kỹ thuật tàu vũ trụ, Kỹ thuật tên lửa, 
+                        Kỹ thuật vệ tinh, Robot học không gian, Trí tuệ nhân tạo, Hệ thông phần mềm, An ninh mạng trong không gian) </li>
+                    <li><number>100</number> suất học bổng Khuyến khích nâng cao năng lực tiếng Anh dành cho sinh viên đạt kết quả cao trong các kỳ thi chứng chỉ đánh giá năng lực tiếng Anh quốc tế;
+                        trình độ IELTS 8.0 trở lên, TOEFL từ 800 trở lên, TOEIC từ 900 trở lên và các chứng chỉ tương đương - mỗi sinh viên được nhận từ 5.000.000 đến 50.000.000 đồng tùy theo trình độ tương ứng.</li>
+                    <li>100 suất học bổng dành cho sinh viên liên kết từ các trường đại học trên thế giới</li>
+                </ul>
+            </div>
     </section>
     </main>
 </div>

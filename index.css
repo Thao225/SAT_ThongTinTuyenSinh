@@ -6,6 +6,9 @@
 .under {
     padding-top : 63px;
 }
+a {
+    text-decoration: none;
+}
 /* ------Achivements------ */
 
 .achiev .icon {
@@ -35,35 +38,36 @@ div.achiev svg:hover {
 }
 
 
-/* ------Bố cục web------ */
+/* ------Bố cục left------ */
 
 .left {
     width : 20%;
     margin : 0;
     border-right : 5px solid lightblue;
+    background-color: white;
 }
 /* Thanh menu */
 div.thanhmenu {
     position : fixed;
     width : 19.7%;
+    vertical-align: center;
 }
 ul.subs > li > a {
     display : block;
     width : 100%;
-    padding : 15%;
+    padding : 12%;
     border-bottom : 0.5px solid gray;
     box-sizing: border-box;
-    text-decoration: none;
-    font-size: 1rem;
-    color : white;
+    font-size: 1.1rem;
+    color : #321d5e;
 }
 ul.subs > li > a:hover {
-    background-color : #8171b6;
-    font-weight: 750;
+    background-color : #b5aad8;
+    font-weight: 800;
 }
 .lstyle {
     list-style-type: none;
-    background-color: #43366e;
+    background-color: white;
     padding : 0;
     margin : 0;
 }
@@ -74,40 +78,55 @@ ul.sub {
 ul.sub > li > a {
     display :block;
     padding : 1rem;
-    background-color: #c8c0e2;
-    border-bottom : 0.5px solid lightgray;
-    border-left : 0.5px dashed lightgray;
+    background-color: #52407b;
+    border : 0.5px solid lightgray;
     border-radius: 20px;
-    margin-bottom: 5px;
-    width : 50%;
-    margin-left : auto;
-
+    width : 90%;
+    margin: 5px auto;
+    color : white;
 }
-.subs:hover .sub {
-        display: block !important;
+ul.sub > li > a:hover {
+    background-color: #b5aad8;
+    font-weight: 750;
+}
+.subs > li:hover > .sub {
+        display: block;
         padding : 1rem;
         border-bottom : 0.5px solid lightgray;
 }
 
+/* ------Bố cục right------ */
+
 .right {
-    width : 80%;
-    margin : 0;
-}
-div.tieude {
-    margin : 0;
-    padding : 2rem;
+    width : 75.4%;
+    margin : 0 2rem 2rem 2rem;
 }
 .tieude h1 {
     text-align: center;
     text-shadow: 2px 2px 10px #D3A3DA;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
+.tieudephu h2 {
+    text-align: center;
+    font-size: 30px;
+}
+p.mota {
+    text-indent: 30px;
+    font-size: 1.2rem;
+}
+
+div.more {
+    display : none;
+}
+
 
 /* ------------ */
 footer {
-    width : 95%;
-    background-color: #8182DA;
+    width : 100%;
+    background-color: #1f203b;
+    color : lightgrey;
     padding : 2.5%;
+    box-sizing: border-box;
     margin : 0;
     bottom : 0;
     direction: inherit;
