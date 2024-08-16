@@ -4,7 +4,7 @@
     align-items: center;  */
 }
 .under {
-    padding-top : 63px;
+    padding-top : 67px;
 }
 a {
     text-decoration: none;
@@ -47,8 +47,16 @@ div.achiev svg:hover {
     background-color: white;
 }
 /* Thanh menu */
+
+#thugonmenu {
+    z-index: 1;
+    width: 80px;
+    height: 40px;;
+    position : fixed;
+}
 div.thanhmenu {
     position : fixed;
+    /* position : absolute; */
     width : 19.7%;
     vertical-align: center;
 }
@@ -90,9 +98,9 @@ ul.sub > li > a:hover {
     font-weight: 750;
 }
 .subs > li:hover > .sub {
-        display: block;
-        padding : 1rem;
-        border-bottom : 0.5px solid lightgray;
+    display: block;
+    padding : 1rem;
+    border-bottom : 0.5px solid lightgray;
 }
 
 /* ------Bố cục right------ */
@@ -110,13 +118,32 @@ ul.sub > li > a:hover {
     text-align: center;
     font-size: 30px;
 }
-p.mota {
+.mota {
     text-indent: 30px;
     font-size: 1.2rem;
 }
-
-div.more {
+ul.mota > li {
+    list-style: none;
+}
+ul.mota > li > ul {
+    font-size: 1rem;
+    list-style: none;
+}
+div.more1 {
     display : none;
+}
+div.more2 {
+    display : none;
+}
+table {
+    width: 100%;
+    border: 1px solid gray;
+    padding : 10px;
+    border-collapse: collapse;
+}
+table th, table td {
+    border: 1px solid gray;
+    padding: 10px;
 }
 
 
