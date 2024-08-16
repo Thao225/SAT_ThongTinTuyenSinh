@@ -4,13 +4,16 @@
     align-items: center;  */
 }
 .under {
-    padding-top : 64px;
+    padding-top : 63px;
 }
 /* ------Achivements------ */
 
 .achiev .icon {
     width: 70%;
     margin : 0 15%;
+}
+div.achives {
+    background-color: white; 
 }
 div.achiev {
     flex : 1;
@@ -35,40 +38,62 @@ div.achiev svg:hover {
 /* ------Bố cục web------ */
 
 .left {
-    width : 25%;
-    margin : 0 0 1rem 1rem;
+    width : 20%;
+    margin : 0;
     border-right : 5px solid lightblue;
-    background-color: white;
 }
-ul.sub {
+/* Thanh menu */
+div.thanhmenu {
+    position : fixed;
+    width : 19.7%;
+}
+ul.subs > li > a {
+    display : block;
+    width : 100%;
+    padding : 15%;
+    border-bottom : 0.5px solid gray;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1rem;
+    color : white;
+}
+ul.subs > li > a:hover {
+    background-color : #8171b6;
+    font-weight: 750;
+}
+.lstyle {
     list-style-type: none;
-    background-color: white;
+    background-color: #43366e;
     padding : 0;
     margin : 0;
 }
+/* submenu */
+ul.sub {
+    display : none;
+}
 ul.sub > li > a {
-    display : block;
-    width : 100%;
-    padding : 10%;
-    box-sizing: border-box;
-    border-bottom : 0.5px solid gray;
-    text-decoration: none;
-    font-size: 1rem;
-    color : #31294C;
+    display :block;
+    padding : 1rem;
+    background-color: #c8c0e2;
+    border-bottom : 0.5px solid lightgray;
+    border-left : 0.5px dashed lightgray;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    width : 50%;
+    margin-left : auto;
+
 }
-ul.sub > li > a:hover {
-    background-color : #D3A3DA;
-    font-weight: 700;
+.subs:hover .sub {
+        display: block !important;
+        padding : 1rem;
+        border-bottom : 0.5px solid lightgray;
 }
+
 .right {
-    width : 75%;
-    margin : 0 1rem 1rem 0;
-    background-color: white;
-    /* margin-top : 6rem;
-    margin-right: 1rem; */
+    width : 80%;
+    margin : 0;
 }
 div.tieude {
-    /* background-color: #2c2c59; */
     margin : 0;
     padding : 2rem;
 }
@@ -76,7 +101,6 @@ div.tieude {
     text-align: center;
     text-shadow: 2px 2px 10px #D3A3DA;
     font-size: 2rem;
-    /* color : white; */
 }
 
 /* ------------ */
