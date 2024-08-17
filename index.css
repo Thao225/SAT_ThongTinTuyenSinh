@@ -118,9 +118,19 @@ ul.sub > li > a:hover {
     text-align: center;
     font-size: 30px;
 }
+h3 {
+    text-indent : 70px;
+    font-size: 1.6rem;
+}
+.thut {
+    text-indent: 30px;
+}
+.nolistType {
+    list-style-type: none;
+}
 .mota {
     text-indent: 30px;
-    font-size: 1.2rem;
+    font-size: 17px;
 }
 ul.mota > li {
     list-style: none;
@@ -129,12 +139,12 @@ ul.mota > li > ul {
     font-size: 1rem;
     list-style: none;
 }
-div.more1 {
+/* div.more1 {
     display : none;
 }
 div.more2 {
     display : none;
-}
+} */
 table {
     width: 100%;
     border: 1px solid gray;
