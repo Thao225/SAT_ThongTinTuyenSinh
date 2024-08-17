@@ -4,7 +4,7 @@
     align-items: center;  */
 }
 .under {
-    padding-top : 67px;
+    padding-top : 65px;
 }
 a {
     text-decoration: none;
@@ -115,15 +115,31 @@ ul.sub > li > a:hover {
     font-size: 2.5rem;
 }
 .tieudephu h2 {
+    width: 70%;
     text-align: center;
     font-size: 30px;
+    padding : 20px;
+    background-color: #b5aad8;
+    border-radius: 40px;
+    left : 10px;
+}
+div.fromLeft  > h2 {
+    margin-left: auto;
+}
+div.fromRight > h2 {
+    margin-right : auto;
+}
+.menuXettuyen > h3 {
+    padding : 20px;
+    text-align: center;
+    background-color: #52407b;
+    border-radius: 50px;
+    color : white;
+    width: 70%;
 }
 h3 {
     text-indent : 70px;
     font-size: 1.6rem;
-}
-.thut {
-    text-indent: 30px;
 }
 .nolistType {
     list-style-type: none;
@@ -132,19 +148,10 @@ h3 {
     text-indent: 30px;
     font-size: 17px;
 }
-ul.mota > li {
-    list-style: none;
-}
 ul.mota > li > ul {
     font-size: 1rem;
     list-style: none;
 }
-/* div.more1 {
-    display : none;
-}
-div.more2 {
-    display : none;
-} */
 table {
     width: 100%;
     border: 1px solid gray;
@@ -154,6 +161,12 @@ table {
 table th, table td {
     border: 1px solid gray;
     padding: 10px;
+}
+
+/* ------Ẩn hiện các thành phần------ */
+
+.hidenAn {
+    display : none;
 }
 
 
