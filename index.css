@@ -4,7 +4,10 @@
     align-items: center;  */
 }
 .under {
-    padding-top : 65px;
+    padding-top : 63px;
+}
+.undersub {
+    scroll-margin-top: 70px;
 }
 a {
     text-decoration: none;
@@ -105,6 +108,15 @@ ul.sub > li > a:hover {
 
 /* ------Bố cục right------ */
 
+.center {
+    align-items: center;
+    vertical-align: center;
+}
+div.info {
+    display :block;
+    padding : 5px;
+    background-color: #321d5e;
+}
 .right {
     width : 75.4%;
     margin : 0 2rem 2rem 2rem;
@@ -117,31 +129,36 @@ ul.sub > li > a:hover {
 .tieudephu h2 {
     width: 70%;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     padding : 20px;
     background-color: #b5aad8;
+    box-shadow: 5px 5px 40px #52407b ;
     border-radius: 40px;
     left : 10px;
 }
-div.fromLeft  > h2 {
+div.fromLeft > h2, div.fromLeft > h3{
     margin-left: auto;
 }
-div.fromRight > h2 {
+div.fromRight > h2, div.fromRight > h3{
     margin-right : auto;
 }
 .menuXettuyen > h3 {
-    padding : 20px;
+    padding : 10px;
     text-align: center;
     background-color: #52407b;
     border-radius: 50px;
     color : white;
-    width: 70%;
+    box-shadow: 5px 5px 5px #52407b ;
+    width : 80%;
 }
 h3 {
     text-indent : 70px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
-.nolistType {
+/* .nolistType {
+    list-style-type: none;
+} */
+.nolistType > li {
     list-style-type: none;
 }
 .mota {
@@ -168,6 +185,9 @@ table th, table td {
 .hidenAn {
     display : none;
 }
+ .displayHien {
+    display : block;
+ }
 
 
 /* ------------ */

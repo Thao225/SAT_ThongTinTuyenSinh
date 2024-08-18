@@ -42,7 +42,9 @@ header{
     left: 0; right: 0;
 
 } */
-
+.float_l {
+    float : left;
+}
 .mucLucs{
     background-color: white;
     padding: 0;

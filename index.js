@@ -1,23 +1,20 @@
-// window.onload = function () {
-//     document.querySelector('#more1').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         var moreDiv = document.querySelector('.more1');
-//         if (moreDiv.style.display === 'none') {
-//             moreDiv.style.display = 'block';
-//             moreLink.textContent = 'Rút gọn ...';
-//         } else {
-//             moreDiv.style.display = 'none';
-//         }
-//     });
-//     document.querySelector('#more2').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         var moreDiv = document.querySelector('.more2');
-//         if (moreDiv.style.display === 'none') {
-//             moreDiv.style.display = 'block';
-//             moreLink.textContent = 'Rút gọn ...';
-//         } else {
-//             moreDiv.style.display = 'none';
-//         }
-//     });
-    
-// }
+window.onload = function () {
+// Lấy tất cả các phần tử có class 'menuXettuyen'
+var outB = document.querySelectorAll('.menuXettuyen');
+
+// Lặp qua từng phần tử và gán sự kiện 'onclick'
+outB.forEach(function(outerBlock) {
+    outerBlock.onclick = function() {
+        var inB = this.querySelectorAll('.displayHien');
+        
+        inB.forEach(function(innerBlock) {
+            // Kiểm tra nếu phần tử hiện tại có class 'hide'
+            if (innerBlock.classList.contains('hide')) {
+                innerBlock.classList.remove('hide'); // Hiển thị block trong
+            } else {
+                innerBlock.classList.add('hide'); // Ẩn block trong nếu đã hiển thị
+            }
+        });
+    };
+});
+}
