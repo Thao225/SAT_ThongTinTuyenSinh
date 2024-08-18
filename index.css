@@ -51,12 +51,12 @@ div.achiev svg:hover {
 }
 /* Thanh menu */
 
-#thugonmenu {
+/* #thugonmenu {
     z-index: 1;
     width: 80px;
     height: 40px;;
     position : fixed;
-}
+} */
 div.thanhmenu {
     position : fixed;
     /* position : absolute; */
@@ -148,8 +148,8 @@ div.fromRight > h2, div.fromRight > h3{
     background-color: #52407b;
     border-radius: 50px;
     color : white;
-    box-shadow: 5px 5px 5px #52407b ;
     width : 80%;
+    margin : 5px;
 }
 h3 {
     text-indent : 70px;
