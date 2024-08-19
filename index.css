@@ -6,7 +6,6 @@
 .screen {
     width : 100vw;
     height : 100vh;
-    overflow: hidden;
 }
 .flex {
     display : flex;
@@ -97,9 +96,13 @@ ul.submenu > li > a:hover {
 .achiev .icon {
     width: 70%;
     margin : 0 15%;
+    transition: 1s;
 }
 div.achives {
     background-color: white; 
+    width: 80%;
+    margin : 1rem;
+    padding : 20px;
 }
 div.achiev {
     flex : 1;
@@ -107,11 +110,11 @@ div.achiev {
     margin : 0 2rem;
 }
 div.achiev > p {
-    font-size : 14px;
+    font-style: italic;
+    font-size : 15px;
     text-align: center;
 }
 div.achiev svg:hover {
-    width: 80%;
-    margin : 0 10%;
+    width : 80%;
 }
 
