@@ -16,6 +16,4 @@ window.onload = function () {
             gallery.classList.remove("show");
         } 
 
-        
-        pre.onclick = function () {
 }
