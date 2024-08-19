@@ -3,20 +3,95 @@
     margin: 0;
     box-sizing: border-box;
 }
+.screen {
+    width : 100vw;
+    height : 100vh;
+    overflow: hidden;
+}
 .flex {
     display : flex;
-    /* justify-content: center;
-    align-items: center;  */
-}
-.under {
-    padding-top : 63px;
-}
-.undersub {
-    scroll-margin-top: 70px;
 }
 a {
     text-decoration: none;
 }
+.noList {
+    list-style-type : none;
+}
+.hide {
+    display : none;
+}
+/* Thanh menu */
+.sticky {
+    position: sticky;
+    top : 0;
+    z-index: 1000;
+    color : #321d5e; 
+    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.6); */
+}
+ul.submenus {
+    background: white;
+    color : #321d5e; 
+    padding : 0;
+    margin : 0;
+}
+ul.submenus > li {   
+    /* border-left : 1px solid #321d5e; */
+    position : relative;
+    margin-left: auto;
+    width : 25%;
+    height: 100%;
+    text-align : center;
+}
+ul.submenus > li > a {
+    display : block;
+    padding : 20px;
+    font-size: 1rem;
+    color : #321d5e; 
+    right : 0;
+    margin : 0;
+    position: relative;
+}
+ul.submenus > li > a:hover {
+    background-color : #a08fd6;
+    font-weight: 700;
+}
+.submenu {
+    display : none;
+    position : absolute;    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    background-color: transparent;
+    z-index: 1000;
+    width : 100%;
+}
+ul.submenu > li {
+    white-space: inherit;
+    margin : 5px;
+}
+ul.submenu > li > a {
+    display :block;
+    padding : 1rem;
+    border : 0.5px solid lightgray;
+    border-radius: 20px;
+    background-color: white;
+    color : #321d5e; 
+}
+ul.submenu > li > a:hover {
+    background-color: #afa7ce;
+    font-weight: 750;
+}
+.submenus > li:hover > .submenu {
+    display: block;
+}
+
+/* ------Ảnh giới thiệu------ */
+.inFo img {
+    width : 100%;
+}
+
 /* ------Achivements------ */
 
 .achiev .icon {
@@ -40,165 +115,3 @@ div.achiev svg:hover {
     margin : 0 10%;
 }
 
-/* ------Ảnh giới thiệu------ */
-.gioithieu img {
-    width : 100%;
-}
-
-
-/* ------Bố cục left------ */
-
-.left {
-    width : 20%;
-    margin : 0;
-    background-color: white;
-}
-/* Thanh menu */
-
-/* #thugonmenu {
-    z-index: 1;
-    width: 80px;
-    height: 40px;;
-    position : fixed;
-} */
-div.thanhmenu {
-    position : fixed;
-    /* position : absolute; */
-    width : 19.7%;
-    vertical-align: center;
-}
-ul.subs > li > a {
-    display : block;
-    width : 100%;
-    padding : 12%;
-    border-bottom : 0.5px solid gray;
-    box-sizing: border-box;
-    font-size: 1.1rem;
-    color : #321d5e;
-}
-ul.subs > li > a:hover {
-    background-color : #b5aad8;
-    font-weight: 800;
-}
-.lstyle {
-    list-style-type: none;
-    background-color: white;
-    padding : 0;
-    margin : 0;
-}
-/* submenu */
-ul.sub {
-    display : none;
-}
-ul.sub > li > a {
-    display :block;
-    padding : 1rem;
-    background-color: #52407b;
-    border : 0.5px solid lightgray;
-    border-radius: 20px;
-    width : 90%;
-    margin: 5px auto;
-    color : white;
-}
-ul.sub > li > a:hover {
-    background-color: #b5aad8;
-    font-weight: 750;
-}
-.subs > li:hover > .sub {
-    display: block;
-    padding : 1rem;
-    border-bottom : 0.5px solid lightgray;
-}
-
-/* ------Bố cục right------ */
-
-.center {
-    align-items: center;
-    vertical-align: center;
-}
-div.info {
-    display :block;
-    padding : 5px;
-    background-color: #321d5e;
-}
-.right {
-    width : 80%;
-    margin : 0 2rem 2rem 2rem;
-}
-.tieude h1 {
-    text-align: center;
-    text-shadow: 2px 2px 10px #D3A3DA;
-    font-size: 2.5rem;
-}
-.tieudephu h2 {
-    width: 70%;
-    text-align: center;
-    font-size: 25px;
-    padding : 20px;
-    background-color: #b5aad8;
-    box-shadow: 5px 5px 40px #52407b ;
-    border-radius: 40px;
-    left : 10px;
-}
-div.fromLeft > h2, div.fromLeft > h3{
-    margin-left: auto;
-}
-div.fromRight > h2, div.fromRight > h3{
-    margin-right : auto;
-}
-.menuXettuyen > h3 {
-    padding : 10px;
-    text-align: center;
-    background-color: #52407b;
-    border-radius: 50px;
-    color : white;
-    width : 80%;
-    margin : 5px;
-}
-h3 {
-    text-indent : 70px;
-    font-size: 1.2rem;
-}
-.nolistType > li {
-    list-style-type: none;
-}
-.mota {
-    text-indent: 30px;
-    font-size: 17px;
-}
-ul.mota > li > ul {
-    font-size: 1rem;
-    list-style: none;
-}
-table {
-    width: 100%;
-    border: 1px solid gray;
-    padding : 10px;
-    border-collapse: collapse;
-}
-table th, table td {
-    border: 1px solid gray;
-    padding: 10px;
-}
-
-/* ------Ẩn hiện các thành phần------ */
-
-.hidenAn {
-    display : none;
-}
- .displayHien {
-    display : block;
- }
-
-
-/* ------------ */
-footer {
-    width : 100%;
-    background-color: #1f203b;
-    color : lightgrey;
-    padding : 2.5%;
-    box-sizing: border-box;
-    margin : 0;
-    bottom : 0;
-    direction: inherit;
-}
