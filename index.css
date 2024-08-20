@@ -18,7 +18,15 @@ a {
 .show {
     display : block !important;
 }
-/* Thanh menu */
+.center {
+    align-items: center;
+    vertical-align: center;
+}
+.undersub {
+    scroll-margin-top: 80px;
+}
+
+/* ------Thanh menu------ */
 .sticky {
     position: sticky;
     top : 0;
@@ -40,22 +48,21 @@ ul.submenus > li > a {
     padding : 20px;
     font-size: 1rem;
     color : #321d5e; 
-    position: relative;
 }
 ul.submenus > li > a:hover {
     background-color : #a08fd6;
     font-weight: 700;
 }
 .submenu {
+    width : 100%;
     display : none;
     position : absolute;    
     list-style: none;
-    position: absolute;
     background-color: transparent;
     z-index: 999;
+    align-items: center;
 }
 ul.submenu > li {
-    white-space: inherit;
     margin : 5px;
 }
 ul.submenu > li > a {
@@ -95,11 +102,11 @@ div.inFo > h1 {
 .anhGioiThieu {
     width : 90%;
     margin : 0 auto;
+    margin-bottom: 5rem;
 }
-.images {
+.image {
     width : 20%;
     height: auto;
-    border-radius : 4px;
 }
 .anhGioiThieu img {
     width : 100%;
@@ -107,8 +114,9 @@ div.inFo > h1 {
     padding : 30px;
     box-sizing: border-box;
     transition : 0.2s;
+    border-radius: 100px;
 }
-.images > img:hover {
+.image > img:hover {
     transform: scale(1.2);
 }
 .gallery {
@@ -123,34 +131,37 @@ div.inFo > h1 {
     z-index: 1000;
     display : none;
 }
-.gallery img {
-    height: 80vh;
-    margin-top : 80px;
+.pictureZoom {
+    width : 80%;
+    height : 80%;
+    margin : 50px auto;
+}
+#popImg{
+    width : 100%;
+    height: 100%;
     transition: 2s;
 }
 .styleButton { 
     font-size : 2.6rem;
 
 }
-.closeButton {
+#closeButton {
     top : 30px;
     right : 100px;
     position: fixed;
 }
-.preButton {
+#preButton {
     left : 30px;
     top : 350px;
     position: fixed;
 }
-.nextButton {
+#nextButton {
     right : 30px;
     top : 350px;
     position: fixed;
 }
 
-
 /* ------Achivements------ */
-
 .achiev .icon {
     width: 70%;
     margin : 0 15%;
@@ -159,12 +170,12 @@ div.inFo > h1 {
 div.achives {
     background-color: white; 
     width: 80%;
-    margin : 1rem;
+    margin : 2rem;
     padding : 20px;
 }
 div.achiev {
     flex : 1;
-    padding : 8px;
+    padding : 2rem;
     margin : 0 2rem;
 }
 div.achiev > p {
@@ -176,4 +187,72 @@ div.achiev svg:hover {
     width : 80%;
 }
 
+/* ------Infomation Sections------ */
+section {
+    width : 90%;
+    margin : 0 auto; 
+}
+div.info {
+    display :block;
+    padding : 5px;
+    background-color: #321d5e;
+}
+.right {
+    width : 80%;
+    margin : 0 2rem 2rem 2rem;
+}
+.tieude h1 {
+    text-align: center;
+    text-shadow: 2px 2px 10px #D3A3DA;
+    font-size: 2.5rem;
+}
+.tieudephu h2 {
+    width: 70%;
+    text-align: center;
+    font-size: 25px;
+    padding : 25px;
+    background-color: #b5aad8;
+    box-shadow: 5px 5px 40px #52407b ;
+    border-radius: 40px;
+    left : 10px;
+    margin-bottom : 2rem;
+}
+div.fromLeft > h2, div.fromLeft > h3 {
+    margin-left: auto;
+}
+div.fromRight > h2, div.fromRight > h3 {
+    margin-right : auto;
+}
+.menuXettuyen > h3 {
+    padding : 20px;
+    text-align: center;
+    background-color: #52407b;
+    border-radius: 50px;
+    color : white;
+    width : 80%;
+    text-indent : 70px;
+    font-size: 1.2rem;
+    margin-bottom : 1.5rem;
+}
+.nolistType > li {
+    list-style-type: none;
+}
+.mota {
+    text-indent: 30px;
+    font-size: 17px;
+}
+ul.mota > li > ul {
+    font-size: 1rem;
+    list-style: none;
+}
+table {
+    width: 100%;
+    border: 1px solid gray;
+    padding : 10px;
+    border-collapse: collapse;
+}
+table th, table td {
+    border: 1px solid gray;
+    padding: 10px;
+}
 
