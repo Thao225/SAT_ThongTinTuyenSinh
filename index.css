@@ -25,6 +25,21 @@ a {
 .undersub {
     scroll-margin-top: 80px;
 }
+#gotoTop {
+    right : 30px;
+    bottom : 50px;
+    position : fixed;
+    width : 50px;
+    height : 50px;
+    text-align: center;
+    background-color: #52407b;
+    color : white;
+    font-size: 30px;
+    font-weight: 800;
+    z-index : 999;
+    padding : 8px;
+    cursor : pointer;
+}
 
 /* ------Thanh menu------ */
 .sticky {
@@ -82,10 +97,10 @@ ul.submenu > li > a:hover {
 }
 
 /* ------Ảnh đầu trang & Ảnh giới thiệu------ */
-.inFo img {
+.tieude img {
     width : 100%;
 }
-div.inFo > h1 {
+.tieude > h1 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     display : block;
     padding : 20px;
@@ -189,23 +204,14 @@ div.achiev svg:hover {
 
 /* ------Infomation Sections------ */
 section {
-    width : 90%;
+    width : 85%;
     margin : 0 auto; 
 }
 div.info {
     display :block;
     padding : 5px;
     background-color: #321d5e;
-}
-.right {
-    width : 80%;
-    margin : 0 2rem 2rem 2rem;
-}
-.tieude h1 {
-    text-align: center;
-    text-shadow: 2px 2px 10px #D3A3DA;
-    font-size: 2.5rem;
-}
+} 
 .tieudephu h2 {
     width: 70%;
     text-align: center;
@@ -215,7 +221,7 @@ div.info {
     box-shadow: 5px 5px 40px #52407b ;
     border-radius: 40px;
     left : 10px;
-    margin-bottom : 2rem;
+    margin : 2rem 0;
 }
 div.fromLeft > h2, div.fromLeft > h3 {
     margin-left: auto;
@@ -232,7 +238,7 @@ div.fromRight > h2, div.fromRight > h3 {
     width : 80%;
     text-indent : 70px;
     font-size: 1.2rem;
-    margin-bottom : 1.5rem;
+    margin : 1.5rem 0;
 }
 .nolistType > li {
     list-style-type: none;
@@ -256,3 +262,32 @@ table th, table td {
     padding: 10px;
 }
 
+/* ------------ */
+footer {
+    width : 100%;
+    background-color: #1f203b;
+    color : lightgrey;
+    padding : 2.5%;
+    box-sizing: border-box;
+    margin : 3rem 0 0 0;
+    bottom : 0;
+
+}
+#logo {
+    /* float : left; */
+    width : 80px;
+    height: 80px;
+
+}
+footer img {
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: 1rem;
+}
+footer h1 {
+    font-size: 12px;
+}
+footer div {
+    border : 1px solid white;
+}

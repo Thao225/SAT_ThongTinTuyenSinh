@@ -49,5 +49,15 @@ window.onload = function () {
         updateButton();
 //---------------------------------------------------------------------------//
 
+//-----GO TO TOP-----
+    let gotoTop = document.getElementById("gotoTop")
+    gotoTop.onclick = function()
+    {
+        document.documentElement.scrollTop = 0;
+    }
+//---------------------------------------------------------------------------//
+
+
+
 
 }
