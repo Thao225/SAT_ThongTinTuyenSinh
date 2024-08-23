@@ -1,5 +1,5 @@
 window.onload = function () {
-//-----ANH GIOI THIEU-----
+//---------- ẢNH GIỚI THIỆU --------------------------------------------------------//
     let images = document.querySelectorAll(".anhGioiThieu img")
     let popImg = document.getElementById("popImg")
     let close = document.getElementById("closeButton")
@@ -47,15 +47,22 @@ window.onload = function () {
                 }    
         }
         updateButton();
-//---------------------------------------------------------------------------//
 
-//-----GO TO TOP-----
+//---------- GO TO TOP --------------------------------------------------------------//
     let gotoTop = document.getElementById("gotoTop")
     gotoTop.onclick = function()
     {
         document.documentElement.scrollTop = 0;
     }
-//---------------------------------------------------------------------------//
+
+
+//---------- CHẠY HIỆU ỨNG TRÁI PHẢI -----------------------------------------------------------//
+
+
+//---------- ẨN HIỆN NỘI DUNG ---------------------------------------------------------------//
+
+
+
 
 
 

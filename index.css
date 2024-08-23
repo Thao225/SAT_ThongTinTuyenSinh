@@ -176,35 +176,9 @@ ul.submenu > li > a:hover {
     position: fixed;
 }
 
-/* ------Achivements------ */
-.achiev .icon {
-    width: 70%;
-    margin : 0 15%;
-    transition: 1s;
-}
-div.achives {
-    background-color: white; 
-    width: 80%;
-    margin : 2rem;
-    padding : 20px;
-}
-div.achiev {
-    flex : 1;
-    padding : 2rem;
-    margin : 0 2rem;
-}
-div.achiev > p {
-    font-style: italic;
-    font-size : 15px;
-    text-align: center;
-}
-div.achiev svg:hover {
-    width : 80%;
-}
-
 /* ------Infomation Sections------ */
 section {
-    width : 85%;
+    width : 80%;
     margin : 0 auto; 
 }
 div.info {
@@ -223,12 +197,7 @@ div.info {
     left : 10px;
     margin : 2rem 0;
 }
-div.fromLeft > h2, div.fromLeft > h3 {
-    margin-left: auto;
-}
-div.fromRight > h2, div.fromRight > h3 {
-    margin-right : auto;
-}
+
 .menuXettuyen > h3 {
     padding : 20px;
     text-align: center;
@@ -261,6 +230,9 @@ table th, table td {
     border: 1px solid gray;
     padding: 10px;
 }
+.hiddenAn {
+    display : none;
+}
 
 /* ------------ */
 footer {
@@ -271,23 +243,41 @@ footer {
     box-sizing: border-box;
     margin : 3rem 0 0 0;
     bottom : 0;
-
 }
-#logo {
-    /* float : left; */
-    width : 80px;
-    height: 80px;
-
-}
-footer img {
+div#logo {
+    float : left;
+    width : 100px;
+    height: 100px;
     background-color: white;
     border-radius: 50%;
-    width: 100px;
-    margin-bottom: 1rem;
+    left : 5px;
 }
-footer h1 {
+#logo img {
+    width : 100px;
+    height : 100px;
+}
+#tenAndlogo > h1 {
     font-size: 12px;
+    width: 450px;
+    padding : 10px;
+    text-align: center;
 }
-footer div {
-    border : 1px solid white;
+footer h2 {
+    padding : 5px;
 }
+footer i {
+    padding : 5px;
+}
+.achievs {
+    padding : 40px;
+}
+.achievs > i {
+    color : white;
+    width : 50px;
+}
+.achievs > h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
