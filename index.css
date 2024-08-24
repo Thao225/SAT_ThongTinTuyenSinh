@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root {
+    --tim : #321d5e;
+    --tieudephu : #52407b;
+}
 .flex {
     display : flex;
 }
@@ -32,7 +36,7 @@ a {
     width : 50px;
     height : 50px;
     text-align: center;
-    background-color: #52407b;
+    background-color: var(--tieudephu);
     color : white;
     font-size: 30px;
     font-weight: 800;
@@ -40,17 +44,23 @@ a {
     padding : 8px;
     cursor : pointer;
 }
+.bogoc {
+    width : 85%;
+    margin : 0 auto; 
+    border : 2px dashed var(--tim); 
+    border-radius: 50px;
+}
 
 /* ------Thanh menu------ */
 .sticky {
     position: sticky;
     top : 0;
     z-index: 999;
-    color : #321d5e;
+    color : var(--tim);
 }
 ul.submenus {
     background: white;
-    color : #321d5e; 
+    color : var(--tim); 
 }
 ul.submenus > li {   
     position : relative;
@@ -62,7 +72,7 @@ ul.submenus > li > a {
     display : block;
     padding : 20px;
     font-size: 1rem;
-    color : #321d5e; 
+    color : var(--tim);
 }
 ul.submenus > li > a:hover {
     background-color : #a08fd6;
@@ -86,7 +96,7 @@ ul.submenu > li > a {
     border : 0.5px solid lightgray;
     border-radius: 20px;
     background-color: white;
-    color : #321d5e; 
+    color : var(--tim);
 }
 ul.submenu > li > a:hover {
     background-color: #afa7ce;
@@ -112,7 +122,50 @@ ul.submenu > li > a:hover {
 }
 @keyframes flyText {
     from { opacity : 0 }
-    to { opacity : 1}
+    to { opacity : 1 }
+}
+#flySpace {
+    position: relative;
+    width : 1000px;
+    top : 20px;
+    left : 0;
+    margin : 0 auto;
+}
+.iconAhihi { 
+    position: absolute;
+    animation: ahihi 5s linear infinite;
+    overflow: hidden;
+}
+.iconAhihi > i {
+    height : 50px;
+    width : 50px;
+    margin : 0;
+} 
+@keyframes ahihi {
+    0% {
+        left: 0;
+        transform: translateY(-50%) rotate(0deg);
+    }
+    20% {
+        left: 20%;
+        transform: translateY(-50%) rotate(5deg);
+    }
+    40% {
+        left: 40%;
+        transform: translateY(-50%) rotate(-5deg);
+    }
+    60% {
+        left: 60%;
+        transform: translateY(-50%) rotate(5deg);
+    }
+    80% {
+        left: 80%;
+        transform: translateY(-50%) rotate(-5deg);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(-50%) rotate(0deg);
+    }
 }
 .anhGioiThieu {
     width : 90%;
@@ -158,7 +211,6 @@ ul.submenu > li > a:hover {
 }
 .styleButton { 
     font-size : 2.6rem;
-
 }
 #closeButton {
     top : 30px;
@@ -179,38 +231,35 @@ ul.submenu > li > a:hover {
 /* ------Infomation Sections------ */
 section {
     width : 80%;
-    margin : 0 auto; 
+    margin : 0 auto;
 }
 div.info {
     display :block;
     padding : 5px;
-    background-color: #321d5e;
+    background-color: var(--tim);
 } 
 .tieudephu h2 {
     width: 70%;
     text-align: center;
     font-size: 25px;
-    padding : 25px;
+    padding : 25px 10px;
     background-color: #b5aad8;
-    box-shadow: 5px 5px 40px #52407b ;
+    box-shadow: 5px 5px 40px var(--tieudephu);
     border-radius: 40px;
     left : 10px;
-    margin : 2rem 0;
+    margin : 1.5rem 0;
 }
-
 .menuXettuyen > h3 {
-    padding : 20px;
+    padding : 10px;
     text-align: center;
-    background-color: #52407b;
+    background-color: var(--tieudephu);
     border-radius: 50px;
     color : white;
     width : 80%;
     text-indent : 70px;
     font-size: 1.2rem;
-    margin : 1.5rem 0;
-}
-.nolistType > li {
-    list-style-type: none;
+    margin : 1rem;
+    cursor: pointer;
 }
 .mota {
     text-indent: 30px;
@@ -230,8 +279,28 @@ table th, table td {
     border: 1px solid gray;
     padding: 10px;
 }
+.motaa {
+    font-size: 17px;
+}
+.plusList li::before {
+    content: "+"; 
+    margin-right: 10px; 
+    color: black;
+}
 .hiddenAn {
     display : none;
+}
+.fly {
+    margin-top : 5rem;
+    left : 0;
+}
+.fromLeft {
+    position : relative;
+    animation: flyFromLeft 1.5s ease-in-out 0.2s forwards;
+}
+@keyframes flyFromLeft {
+    from { left : 0}
+    to {left : 12.5%}
 }
 
 /* ------------ */

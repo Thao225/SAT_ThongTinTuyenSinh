@@ -1,4 +1,5 @@
 window.onload = function () {
+
 //---------- ẢNH GIỚI THIỆU --------------------------------------------------------//
     let images = document.querySelectorAll(".anhGioiThieu img")
     let popImg = document.getElementById("popImg")
@@ -33,7 +34,6 @@ window.onload = function () {
                 currentIndex--;
                 popImg.src = `img/anh${currentIndex}.jpg`;
                 updateButton();
-
             }    
         }
     //Next Button
@@ -55,16 +55,23 @@ window.onload = function () {
         document.documentElement.scrollTop = 0;
     }
 
-
-//---------- CHẠY HIỆU ỨNG TRÁI PHẢI -----------------------------------------------------------//
-
-
 //---------- ẨN HIỆN NỘI DUNG ---------------------------------------------------------------//
+    let displayND = document.querySelectorAll(".menuXettuyen")
+    let ND = document.querySelectorAll(".hiddenAn")
+    displayND.forEach((NDs, index) => {
+        NDs.onclick = function() {
+            ND[index].classList.toggle("hiddenAn");
+        };
+    });
+}
+window.onscroll = function() {
 
-
-
-
-
-
-
+//---------- CHẠY HIỆU ỨNG TRÁI -----------------------------------------------------------//
+    let elements = document.querySelectorAll(".fly");
+    elements.forEach((els, index) => {
+        let position = els.getBoundingClientRect(); //Trả về vị trí theo viewport
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            els.classList.add("fromLeft");
+        }
+    });
 }
