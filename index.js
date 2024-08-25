@@ -32,7 +32,7 @@ window.onload = function () {
             if (currentIndex > 1)
             {
                 currentIndex--;
-                popImg.src = `img/anh${currentIndex}.jpg`;
+                popImg.src = `img/anh${currentIndex}.png`;
                 updateButton();
             }    
         }
@@ -42,7 +42,7 @@ window.onload = function () {
             if (currentIndex < 5)
                 {
                     currentIndex++;
-                    popImg.src = `img/anh${currentIndex}.jpg`;
+                    popImg.src = `img/anh${currentIndex}.png`;
                     updateButton();
                 }    
         }
