@@ -46,7 +46,7 @@ a {
 }
 .bogoc {
     width : 80%;
-    margin : 20px; 
+    margin : 20px auto; 
     border : 2px dashed var(--tim); 
     border-radius: 50px;
     margin-bottom: 5rem;
@@ -301,68 +301,39 @@ table th, table td {
     margin-bottom : 4rem;
 }
 
-/* ------News Section------ */
+/* ------SV Section------ */
 .svSpace {
-    width : 95%;
-    background-color: lightsteelblue;
-    margin : 0 2.5%;
-    padding : 1rem;
-    height:auto;
-    border-radius: 20px;
+    width : 80%;
+    margin : 0 auto;
+    overflow : hidden;
 }
 .svSpace h1 {
+    display: block;
+    background-color: var(--tim);
+    color: white;
+    width: 50%;
     text-align: center;
-    padding : 10px;
+    border-radius: 20px 20px 0 0;
+}
+.svSpace h1::after {
+    content: " ";
+    background-color: var(--tim);
+    height: 5px;
+    width: 200%;
+    display: block;
 }
 .listSpace {
     width : 100%;
-    overflow: auto;
-}
-.listSpace::-webkit-scrollbar {
-    display : none;
-}
-.list {
-    flex-wrap: nowrap; 
+    margin-top : 30px;
 }
 .item {
-    flex: 0 0 50%;
-    padding : 20px;
-    box-sizing: border-box;
+    width : 18%;
+    padding : 1%;
 }
-.imgSv {
+.item img, .content {
     width : 100%;
-    height : auto;
 }
-.item .content p {
-    font-size: 13px;
-    text-indent : 20px;
-    text-align: center;
-}
-.direction {
-    justify-content: center;
-    margin-top: 1rem;
-}
-.direction button {
-    font-weight : bold;
-    background-color: #ffffff44;
-    border : none;
-    width : 50px;
-    height : 50px;
-    border-radius: 50%;
-    transition: 0.5s;
-    margin : 0 10px;
-    display : flex;
-    justify-content: center; 
-    align-items: center;
-    cursor: pointer;
-}
-.direction button > i {
-    font-size: 30px;
-    padding : 0;
-}
-.direction button:hover {
-    background-color: #ffffff;
-}
+
 
 /* ------------ */
 footer {
