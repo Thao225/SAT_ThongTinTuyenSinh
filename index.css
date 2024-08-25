@@ -45,8 +45,8 @@ a {
     cursor : pointer;
 }
 .bogoc {
-    width : 85%;
-    margin : 0 auto; 
+    width : 80%;
+    margin : 20px; 
     border : 2px dashed var(--tim); 
     border-radius: 50px;
     margin-bottom: 5rem;
@@ -126,7 +126,7 @@ ul.submenu > li > a:hover {
     to { opacity : 1 }
 }
 #flySpace {
-    position: relative;
+    position : relative;
     width : 1000px;
     top : 20px;
     left : 0;
@@ -252,9 +252,8 @@ section {
     border-radius: 50px;
     color : white;
     width : 80%;
-    text-indent : 70px;
     font-size: 1.2rem;
-    margin : 1rem;
+    margin : 1rem 0;
     cursor: pointer;
 }
 .mota {
@@ -303,33 +302,41 @@ table th, table td {
 }
 
 /* ------News Section------ */
-.newsSpace {
-    width : 85%;
+.svSpace {
+    width : 95%;
     background-color: lightsteelblue;
-    margin : 0 auto;
+    margin : 0 2.5%;
     padding : 1rem;
-    height: 400px;
+    height:auto;
     border-radius: 20px;
 }
-.newsSpace h1, .subject {
+.svSpace h1 {
     text-align: center;
     padding : 10px;
 }
-.item {
-    width : 25%;
-    height : 200px;
-    overflow: hiden;
-}
-.subject {
-    font-size: 1rem;
-    font-weight: 500;
-}
-.item img {
+.listSpace {
     width : 100%;
+    overflow: auto;
 }
-.ndTT p {
-    text-indent: 2rem;
-    overflow: hiden;
+.listSpace::-webkit-scrollbar {
+    display : none;
+}
+.list {
+    flex-wrap: nowrap; 
+}
+.item {
+    flex: 0 0 50%;
+    padding : 20px;
+    box-sizing: border-box;
+}
+.imgSv {
+    width : 100%;
+    height : auto;
+}
+.item .content p {
+    font-size: 13px;
+    text-indent : 20px;
+    text-align: center;
 }
 .direction {
     justify-content: center;
