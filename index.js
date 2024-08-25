@@ -1,5 +1,12 @@
 window.onload = function () {
 
+//responsive 
+    let btn = document.querySelector("#menuBtn")
+    let thanhMenu = document.querySelector(".thanhmenu")
+    btn.onclick = function () {
+        thanhMenu.classList.toggle("show");
+    }
+
 //---------- ẢNH GIỚI THIỆU --------------------------------------------------------//
     let images = document.querySelectorAll(".anhGioiThieu img")
     let popImg = document.getElementById("popImg")

@@ -8,9 +8,9 @@ header{
     left: 0;
     width: 100%;
 }
-.float_l {
+/* .float_l {
     float : left;
-}
+} */
 .mucLucs{
     background-color: white;
     padding: 0;
@@ -25,17 +25,21 @@ header{
 }
 
 #logoTruong{
-    width: 300px;
+    width: 18rem;
 }
-
+#homeBtn {
+    display : none;
+}
 nav.mucLucs{
     margin-left: auto;
-    padding-right: 30px;
+    padding-right: 18px;
+    width : 100%;
 }
 
 ul.mucLucs{
-    margin: 0.3rem;
     list-style-type: none;
+    margin: 0.3rem auto;
+    
 }
 
 .mucLucs>li>a{
@@ -53,7 +57,7 @@ ul.mucLuc > li {
     display : none;
 }
 
-Thanh menu nhỏ trong menu
+/* Thanh menu nhỏ trong menu */
 ul.mucLuc{
     margin: 0;
     list-style-type: none;
