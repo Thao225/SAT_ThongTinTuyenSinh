@@ -66,14 +66,6 @@ a {
     background-attachment: fixed;
     background-size: cover;
 }
-.bogoc {
-    width : 80%;
-    margin : 0 auto; 
-    background-color: white; 
-    border-radius: 50px;
-    margin-bottom: 5rem;
-    padding : 20px;
-}
 
 /* ------Thanh menu------ */
 .sticky {
@@ -131,6 +123,9 @@ ul.submenu > li > a:hover {
 }
 
 /* ------Ảnh đầu trang & Ảnh giới thiệu------ */
+.tieude {
+    background : #ffffff;
+}
 .tieude img {
     width : 100%;
 }
@@ -138,11 +133,15 @@ ul.submenu > li > a:hover {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     display : block;
     padding : 20px;
+    margin : 2rem auto 1rem;
+    width : 70%;
     font-size : 1.8rem;
+    line-height: 3rem;
     font-style: bold;
     text-align : center;
     opacity : 0;
-    color : white;
+    color : var(--tim);
+    text-shadow: 2px 2px #af94e9;
     animation : flyText 1s forwards infinite;
 }
 @keyframes flyText {
@@ -151,10 +150,11 @@ ul.submenu > li > a:hover {
 }
 #flySpace {
     position : relative;
-    width : 20rem;
+    width : 25rem;
     top : 20px;
     left : 0;
     margin : 0 auto;
+    height : 2rem;
 }
 .iconAhihi { 
     position: absolute;
@@ -192,13 +192,14 @@ ul.submenu > li > a:hover {
     }
 }
 .anhGioiThieu {
-    width : 90%;
+    width : 100%;
+    height : auto;
     margin : 0 auto;
-    margin-bottom: 2rem;
+    background : linear-gradient(to right, #e0b8bf, #92a0e6);
 }
 .anhGioiThieu img {
     width : 100%;
-    height: 200px;
+    height: 220px;
     padding : 30px;
     box-sizing: border-box;
     transition : 0.2s;
@@ -249,6 +250,14 @@ ul.submenu > li > a:hover {
 }
 
 /* ------Infomation Sections------ */
+.infoArea {
+    width : 85%;
+    margin : 3rem auto 0; 
+    background-color: white; 
+    border-radius: 50px;
+    margin-bottom: 5rem;
+    padding : 20px;
+}
 section {
     width : 90%;
     margin : 0 auto;
@@ -334,17 +343,21 @@ table th, table td {
     width: 50%;
     text-align: center;
     border-radius: 20px 20px 0 0;
+    border: 1px solid white;
 }
-.svSpace h1::after {
+/* .svSpace h1::after {
     content: " ";
-    background-color: var(--tim);
-    height: 5px;
+    background-color: white;
+    height: 3px;
     width: 200%;
     display: block;
-}
+} */
 .listSpace {
+    background-color: var(--tim);
     width : 100%;
-    margin-top : 30px;
+    padding : 2rem;
+    border-top: none;
+    border: 1px solid white;
 }
 .item {
     width : 18%;
