@@ -6,6 +6,13 @@ window.onload = function () {
     btn.onclick = function () {
         thanhMenu.classList.toggle("show");
     }
+    //---------- CLOSE MENU MOBILE -----------//
+    let cls = document.getElementById("close_menu_mobile")
+    console.log(cls)
+    cls.onclick = function() {
+        thanhMenu.classList.remove("show");
+        console.log(thanhMenu.classList);
+    }
 
 //---------- ẢNH GIỚI THIỆU --------------------------------------------------------//
     let images = document.querySelectorAll(".anhGioiThieu img")
@@ -61,6 +68,12 @@ window.onload = function () {
     {
         document.documentElement.scrollTop = 0;
     }
+//---------- CLOSE MENU MOBILE --------------------------------------------------------------//
+    let closeMenu = document.getElementById("close_menu_mobile")
+    closeMenu.onclick = function()
+    {
+
+    }
 
 //---------- ẨN HIỆN NỘI DUNG ---------------------------------------------------------------//
     let displayND = document.querySelectorAll(".menuXettuyen")
@@ -72,47 +85,28 @@ window.onload = function () {
     });
 
 //---------- RUN WITH TIMER ---------------------------------------------------------------// 
-    // let listSv = document.querySelector(".listSpace")
-    // let w = listSv.offsetWidth; 
-    // console.log(w); //810
-    // let contents = document.querySelectorAll(".item")
-    // let l = (contents.length/2);  // 3
-    // console.log(l);
-    // let current = 0;
-    // setInterval( () =>
-    // {
-    //         let w = listSv.offsetWidth; 
-    //         current++;
-    //         listSv.style.transform = `translateX(${w *-1 *current})`;
-    // }, 4000)
-    let listSv = document.querySelector(".listSpace");
-    let contents = document.querySelectorAll(".item");
-    let totalItems = contents.length / 2;  // Mỗi lần hiển thị 2 item, nên chia đôi
-    let current = 0;
 
-    // setInterval(() => {
-    //     let w = listSv.offsetWidth; // Chiều rộng của listSpace
-    //     current++;
-        
-    //     // Nếu current vượt quá số lượng items cần hiển thị, reset lại
-    //     if (current >= totalItems) {
-    //         current = 0;
-    //     }
-
-    //     // Dịch chuyển listSpace bằng cách sử dụng translateX
-    //     listSv.style.transform = `translateX(${-w * current}px)`;
-    //     listSv.style.transition = 'transform 0.5s ease-in-out'; // Thêm hiệu ứng chuyển động
-    // }, 4000);
 
 }
 window.onscroll = function() {
 
 //---------- CHẠY HIỆU ỨNG TRÁI -----------------------------------------------------------//
     let elements = document.querySelectorAll(".fly");
-    elements.forEach((els, index) => {
-        let position = els.getBoundingClientRect(); //Trả về vị trí theo viewport
+    elements.forEach((el, index) => {
+        let position = el.getBoundingClientRect(); //Trả về vị trí theo viewport
         if (position.top < window.innerHeight && position.bottom >= 0) {
-            els.classList.add("fromLeft");
+            el.classList.add("fromLeft");
         }
     });
+//---------- HIỆU ỨNG CHO THANH MENU KHI TRƯỢT TRANG -----------------------------------------------------------//
+    const stickymenu = document.querySelector(".sticky");
+    const scrollY = window.scrollY; //số pixel đã được cuộn dọc theo trục Y
+    console.log(scrollY);
+        if (scrollY > 0) {
+            stickymenu.style.opacity = 0.9; 
+        } 
+        else {
+            stickymenu.style.opacity = 1; 
+        }
+        
 }

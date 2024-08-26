@@ -27,9 +27,6 @@ header{
 #logoTruong{
     width: 18rem;
 }
-#homeBtn {
-    display : none;
-}
 nav.mucLucs{
     margin-left: auto;
     padding-right: 18px;

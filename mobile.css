@@ -91,6 +91,19 @@
         font-size: 1.5rem;
         padding : 15px;
     }
+    #close_menu_mobile {
+        display : flex;
+        border : 0.5px solid black;
+        border-radius: 2px;
+        background-color: var(--tim);
+        width : 1.2rem;
+        height : 1.2rem;
+        margin: auto;
+        padding : 0.5rem;
+        z-index : 1000;
+        justify-content: center; 
+        align-items: center;  
+    }
 /* ẢNH GIỚI THIỆU */
     .anhGioiThieu {
         flex-wrap: wrap;
