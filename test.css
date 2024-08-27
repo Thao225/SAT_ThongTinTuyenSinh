@@ -192,8 +192,9 @@ ul.submenu > li > a:hover {
     }
 }
 .anhGioiThieu {
-    width : 100%;
+    width : 85%;
     height : auto;
+    border-radius: 1rem;;
     margin : 0 auto;
     background : linear-gradient(to right, #e0b8bf, #92a0e6);
 }
