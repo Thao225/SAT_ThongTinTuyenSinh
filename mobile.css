@@ -8,9 +8,6 @@
 }
 @media screen and (max-width : 767px) {
     * {
-        padding : 0;
-        margin: 0;
-        box-sizing: border-box;
         font-size : 12px;
     }
     :root {
@@ -52,30 +49,14 @@
     }
     ul.submenus > li {   
         width : 100%;
-        margin : 0;
-        text-align : center;
     }
     .submenu {
-        display : none;
-        position : relative;    
-        list-style: none;
-        background-color: transparent;
-        z-index: 999;
-        padding : 0;
-    }
-    .submenu > li {
-        width : 100%;
-        padding : 0;
-
+        position : inherit;
     }
     ul.submenu > li > a {
         display :block;
         padding : 0.5rem;
-        border : 0.5px solid lightgray;
-        border-radius: 20px;
-        background-color: white;
-        color : var(--tim);
-    }
+    } 
     #menuBtn {
         display : block;
         position : fixed;
@@ -91,19 +72,6 @@
         color : white;
         font-size: 1.5rem;
         padding : 15px;
-    }
-    #close_menu_mobile {
-        display : flex;
-        border : 0.5px solid black;
-        border-radius: 2px;
-        background-color: var(--tim);
-        width : 1.2rem;
-        height : 1.2rem;
-        margin: auto;
-        padding : 0.5rem;
-        z-index : 1000;
-        justify-content: center; 
-        align-items: center;  
     }
 /* ẢNH GIỚI THIỆU */
     .anhGioiThieu {
