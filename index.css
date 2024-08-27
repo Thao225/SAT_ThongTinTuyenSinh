@@ -175,7 +175,7 @@ ul.submenu > li > a:hover {
     }
 }
 .anhGioiThieu {
-    width : 90%;
+    width : 100%;
     margin : 0 auto;
     margin-bottom: 2rem;
 }
@@ -185,7 +185,6 @@ ul.submenu > li > a:hover {
     padding : 30px;
     box-sizing: border-box;
     transition : 0.2s;
-    border-radius: 100px;
 }
 .image > img:hover {
     transform: scale(1.2);

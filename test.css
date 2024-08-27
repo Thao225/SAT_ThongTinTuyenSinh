@@ -151,8 +151,6 @@ ul.submenu > li > a:hover {
 #flySpace {
     position : relative;
     width : 25rem;
-    top : 20px;
-    left : 0;
     margin : 0 auto;
     height : 2rem;
 }
@@ -192,19 +190,18 @@ ul.submenu > li > a:hover {
     }
 }
 .anhGioiThieu {
-    width : 85%;
+    width : 100%;
     height : auto;
-    border-radius: 1rem;;
-    margin : 0 auto;
     background : linear-gradient(to right, #e0b8bf, #92a0e6);
+    text-align: center;
 }
 .anhGioiThieu img {
-    width : 100%;
+    width : 90%;
     height: 220px;
     padding : 30px;
     box-sizing: border-box;
     transition : 0.2s;
-    border-radius: 100px;
+    border-radius: 10rem;
 }
 .image > img:hover {
     transform: scale(1.2);
@@ -333,9 +330,8 @@ table th, table td {
 
 /* ------SV Section------ */
 .svSpace {
-    width : 80%;
+    width : 85%;
     margin : 0 auto;
-    overflow : hidden;
 }
 .svSpace h1 {
     display: block;
@@ -346,17 +342,20 @@ table th, table td {
     border-radius: 20px 20px 0 0;
     margin : 0;
     border: 1px solid white;
+    font-size: 2rem;;
 }
 .listSpace {
     background-color: var(--tim);
     width : 100%;
-    padding : 2rem;
+    padding : 1.5rem;
     border-top: none;
     border: 1px solid white;
+    margin : 0 !important;
 }
 .item {
     width : 18%;
     padding : 1%;
+    margin : 0 auto;
 }
 .item img, .content {
     width : 100%;
