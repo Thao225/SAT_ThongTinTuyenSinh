@@ -6,13 +6,9 @@ window.onload = function () {
     btn.onclick = function () {
         thanhMenu.classList.toggle("show");
     }
-    //---------- CLOSE MENU MOBILE -----------//
-    let cls = document.getElementById("close_menu_mobile")
-    console.log(cls)
-    cls.onclick = function() {
-        thanhMenu.classList.remove("show");
-        console.log(thanhMenu.classList);
-    }
+//---------- CLOSE MENU MOBILE -----------//
+    
+
 
 //---------- ẢNH GIỚI THIỆU --------------------------------------------------------//
     let images = document.querySelectorAll(".anhGioiThieu img")
@@ -69,11 +65,7 @@ window.onload = function () {
         document.documentElement.scrollTop = 0;
     }
 //---------- CLOSE MENU MOBILE --------------------------------------------------------------//
-    let closeMenu = document.getElementById("close_menu_mobile")
-    closeMenu.onclick = function()
-    {
-
-    }
+    
 
 //---------- ẨN HIỆN NỘI DUNG ---------------------------------------------------------------//
     let displayND = document.querySelectorAll(".menuXettuyen")
