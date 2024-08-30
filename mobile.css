@@ -8,7 +8,8 @@
 }
 @media screen and (max-width : 767px) {
     * {
-        font-size : 12px;
+        font-size : 12px; 
+        max-width: 100%;
     }
     :root {
         --tim : #321d5e;
@@ -18,18 +19,24 @@
 /* <----------THANH MENU START------------------------> */
     .thanhmenu {
         display : none;
-        width : 80%;
-        margin : 0 auto;
+        width : 100vw;
+        margin : 0;
+        position : relative;
     } 
+    .logoTruong {
+        display : none;
+    }
     .menuDt {
         display : block; 
         z-index : 9999;
-        color : white;
+        background-color : white;
         display : flex;
-        margin : 1rem 0 0 1rem;
+        margin : 0;
+        width : 100%;
+        position : sticky;
     }
     .menuDt img {
-        width : 5rem;
+        width : 20rem;
     }
     #menuBtn {
         display : flex;
@@ -40,78 +47,35 @@
         align-items: center;
         z-index : 1000;
         cursor: pointer;
+        margin : 0.5rem 1rem;
+        color : white;
+        margin-left : auto;
+    }
+     .mucLucs {
+        flex-direction: column;
+        position : relative;
+    }
+    .sub > ul {
+        width : 90%;
+        position : relative;
+        margin-left: auto;
+    } 
+    .sub > ul > li {
+        border-bottom : 1px solid lightgray;
+    }
+    .close {
+        display : block;
     }
 
-    /* #homeBtn {
-        display : block;
-        position : fixed;
-        width : 50px;
-        height : 50px;
-        background-color: var(--tim);
-        top : 10px;
-        left : 10px;
-        z-index : 1000;
-    }
-    #homeBtn > a > i {
-        text-align: center;
-        font-size: 1.5rem;
-        color : white;
-        padding : 15px;
-    } */
+
+
+    
+
+
+    
+   
 /* <----------THANH MENU END------------------------> */
-/* MENU TRANG TUYỂN SINH */
-    /* .thanhmenu {
-        display : none;
-        width : 80%;
-        margin : 0 auto;
-    }
-    nav .submenus {
-        flex-direction: column ;
-        z-index: 999;
-        width : 100%;
-        flex : 1;
-    }
-    ul.submenus > li {   
-        width : 100%;
-    }
-    .submenu {
-        position : inherit;
-    }
-    ul.submenu > li > a {
-        display :block;
-        padding : 0.5rem;
-    } 
-    #menuBtn {
-        display : block;
-        position : fixed;
-        width : 50px;
-        height : 50px;
-        background-color: var(--tim);
-        top : 10px;
-        right : 20px;
-        z-index : 1000;
-        cursor: pointer;
-    }
-    #menuBtn > i {
-        color : white;
-        font-size: 1.5rem;
-        padding : 15px;
-    } */
-/* ẢNH GIỚI THIỆU */
-    .anhGioiThieu {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-    }
-    .pictureZoom {
-        width : 80%;
-        height : 60%;
-        margin : 20% auto;
-    }
-    #flySpace {
-        width : 15rem;
-        top : 1rem;
-    }
+
 /* CẢM NGHĨ SINH VIÊN */
 .listSpace {
     width : 100%;

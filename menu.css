@@ -11,7 +11,7 @@
 }
 .logoTruong{
     padding-left: 3rem;
-    margin: 0.3rem;
+    margin: 5px auto;
     width : 40%;
 }
 #logoTruong{
@@ -19,20 +19,21 @@
 }
 nav.mucLucs{
     margin-left: auto;
-    padding-right: 18px;
     width : 100%;
+    margin : 0 auto;
 }
 ul.mucLucs {
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
+    font-size: 1rem;
 }
 .mucLucs>li>a{
     text-decoration: none;
     display: block;
-    padding: 0 1.2rem;
+    padding: 1rem;
     color: #321d5e;
     font-weight: bold;
-    margin: 1.25rem 0.5rem;
-    border-left : 2px solid lightgray;
+    margin : 6px auto;
 }
 ul.mucLucs>li>a:hover{
     color: #b9a2d8;
