@@ -15,11 +15,34 @@
         --tieudephu : #52407b;
     }
     
-/* MENU TRANG CHỦ */
-    body header {
+/* <----------THANH MENU START------------------------> */
+    .thanhmenu {
         display : none;
+        width : 80%;
+        margin : 0 auto;
+    } 
+    .menuDt {
+        display : block; 
+        z-index : 9999;
+        color : white;
+        display : flex;
+        margin : 1rem 0 0 1rem;
     }
-    #homeBtn {
+    .menuDt img {
+        width : 5rem;
+    }
+    #menuBtn {
+        display : flex;
+        width : 3rem;
+        height : 3rem;
+        padding : 1rem;
+        background-color: var(--tim);
+        align-items: center;
+        z-index : 1000;
+        cursor: pointer;
+    }
+
+    /* #homeBtn {
         display : block;
         position : fixed;
         width : 50px;
@@ -34,9 +57,10 @@
         font-size: 1.5rem;
         color : white;
         padding : 15px;
-    }
+    } */
+/* <----------THANH MENU END------------------------> */
 /* MENU TRANG TUYỂN SINH */
-    .thanhmenu {
+    /* .thanhmenu {
         display : none;
         width : 80%;
         margin : 0 auto;
@@ -72,7 +96,7 @@
         color : white;
         font-size: 1.5rem;
         padding : 15px;
-    }
+    } */
 /* ẢNH GIỚI THIỆU */
     .anhGioiThieu {
         flex-wrap: wrap;
