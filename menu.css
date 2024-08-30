@@ -15,12 +15,11 @@
     width : 40%;
 }
 #logoTruong{
-    width: 18rem;
+    width: 80%;
 }
 nav.mucLucs{
-    margin-left: auto;
     width : 100%;
-    margin : 0 auto;
+    margin : 0;
 }
 ul.mucLucs {
     justify-content: center;
@@ -64,6 +63,16 @@ ul.mucLuc>li>a:hover{
 .mucLuc>li{
     margin: 0 1.5rem 1.5rem 1.5rem;
     margin-left: 1.5rem;
+}
+#closeMenu {
+    position : absolute;
+    right : 1.5rem;
+    bottom : 5px;
+    padding : 0.7rem;
+    background-color: rgb(138, 86, 144);
+    display : none;
+    border : 0.5px solid black;
+    font-weight: bold;
 }
 /* <----------THANH MENU END------------------------> */
 

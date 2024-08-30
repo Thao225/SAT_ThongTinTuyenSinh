@@ -22,6 +22,7 @@
         width : 100vw;
         margin : 0;
         position : relative;
+        transition: 2s ease-out;;
     } 
     .logoTruong {
         display : none;
@@ -51,53 +52,27 @@
         color : white;
         margin-left : auto;
     }
-     .mucLucs {
+    .mucLucs {
         flex-direction: column;
         position : relative;
     }
     .sub > ul {
-        width : 90%;
+        width : 70%;
         position : relative;
         margin-left: auto;
     } 
     .sub > ul > li {
         border-bottom : 1px solid lightgray;
     }
-    .close {
+    #closeMenu {
         display : block;
     }
 
+/* <----------DAU TRANG  START----------------------> */
+    #flySpace {
+        display : none;
+    }
 
+/* <----------DAU TRANG  START----------------------> */
 
-    
-
-
-    
-   
-/* <----------THANH MENU END------------------------> */
-
-/* CẢM NGHĨ SINH VIÊN */
-.listSpace {
-    width : 100%;
-    margin-top : 30px;
-    flex-wrap: wrap;
-}
-.item {
-    width : 48%;
-    padding : 1%;
-}
-/* FOOTER */
-footer {
-    position : relative;
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-}
-div#logo {
-    position : absolute;
-}
-
-
-
-   
 }

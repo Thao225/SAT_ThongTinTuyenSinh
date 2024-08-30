@@ -60,6 +60,85 @@ body {
     top : 0;
     z-index: 999;
 }
-.nd {
-    background-color: white;
+section {
+    width : 100%;
+    background-color: whitesmoke;
+}
+
+/*<--------------Dau Trang------------------->*/
+.dauTrang {
+    background-color: whitesmoke;
+}
+.dauTrang img {
+    width : 100%;
+}
+.dauTrang > h1 {
+    display : block;
+    padding : 20px;
+    margin : 2rem auto 1rem;
+    width : 70%;
+    font-size : 1.8rem;
+    line-height: 3rem;
+    font-style: bold;
+    text-align : center;
+    opacity : 0;
+    color : var(--tim);
+    text-shadow: 2px 2px #af94e9;
+    animation : flyText 1s forwards infinite;
+}
+@keyframes flyText {
+    from { opacity : 0 }
+    to { opacity : 1 }
+}
+#flySpace {
+    width : 80%;
+    margin : 0 auto;
+    height : 2rem;
+    position: relative;
+}
+.iconAhihi { 
+    position: absolute;
+    animation: ahihi 5s linear infinite;
+}
+.iconAhihi > i {
+    height : 50px;
+    width : 50px;
+    margin : 0;
+} 
+@keyframes ahihi {
+    0% {
+        left: 0;
+        transform: translateY(-50%) rotate(5deg);
+    }
+    20% {
+        left: 20%;
+        transform: translateY(0) rotate(-5deg);
+    }
+    40% {
+        left: 40%;
+        transform: translateY(-50%) rotate(5deg);
+    }
+    60% {
+        left: 60%;
+        transform: translateY(0) rotate(-5deg);
+    }
+    80% {
+        left: 80%;
+        transform: translateY(-50%) rotate(5deg);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(0) rotate(-5deg);
+    }
+}
+
+/*<--------------Anh gioi thieu------------------->*/
+.wapper {
+    width : 800px;
+    overflow : hidden;
+    margin : 0 auto;
+}
+.listImg img {
+    width : 800px;
+
 }
