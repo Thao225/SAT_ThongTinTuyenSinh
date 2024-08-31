@@ -27,7 +27,7 @@ a {
 }
 .center {
     align-items: center;
-    vertical-align: center;
+    justify-content: center;
 }
 #gotoTop {
     right : 30px;
@@ -67,7 +67,7 @@ section {
 
 /*<--------------Dau Trang------------------->*/
 .dauTrang {
-    background: rgba(255, 255, 255, 0.866);
+    background: white;
 }
 .dauTrang img {
     width : 100%;
@@ -111,7 +111,7 @@ section {
     animation: ahihi 4s linear infinite;
 }
 .iconAhihi:nth-child(2) > i {
-    animation-delay: 0.1s;
+    animation-delay: 0.2s;
 }
 @keyframes ahihi {
     0% {
@@ -279,7 +279,11 @@ h1.tieude {
 }
 .menuXettuyen ul > li > a {
     display : block;
+    height : 4rem;
     padding : 1rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
     color :rgb(219, 215, 224)
 }
 .menuXettuyen ul > li > a:hover {
@@ -287,11 +291,12 @@ h1.tieude {
     font-weight: 700;
     background-color: rgb(207, 194, 179);
 }
-.tab li:hover .menuXettuyen > li{
+.tab li:hover .menuXettuyen > li {
     display: block ;
 } 
 .menuContent .tabContent {
     display : none;
+    width : 80%;
 }
 .mota {
     text-indent: 30px;
@@ -353,11 +358,109 @@ table th, table td {
     font-weight: unset;
     background-color: unset;
 }
+/* <----------Cam nghi cua sinh vien----------------------> */
+.cuuSv {
+    background : linear-gradient(to bottom, #321d5ea1, rgba(0, 0, 0, 0.743));
+    color : rgb(207, 203, 210);
+}
+.listSpace {
+    width : 80%;
+    padding : 1.5rem;
+    border-top: none;
+    border: 1px solid white;
+    margin : 1rem auto 0;
+    flex-wrap: wrap;
+}
+.item {
+    margin : 0 auto;
+    position: relative;
+    width: 200px; 
+    height: 200px;
+    background-color: white;
+    margin: 5px auto;
+}
+.imgSv {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; 
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.884);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+.item:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+.item:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.442); 
+    z-index: 1; 
+}
 
-/* <----------Cuu sinh vien----------------------> */
+/* ---------FAQ--------------------- */
+.question {
+    background : linear-gradient(to bottom, rgba(0, 0, 0, 0.743), #321d5ea1);
+}
+.question::after {
+    content : "";
+    display : block;
+    height : 2rem;
+    z-index: 100;
+}
+.faq {
+    width: 60%;
+    margin: 1rem auto 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.faqItem {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.faqQuestion {
+    padding: 1rem;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faqQuestion h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+.faqAnswer {
+    display: none;
+    padding: 1rem;
+    background-color: #fff;
+    color: #555;
+}
+.faqItem.ac .faqAnswer {
+    display: block; 
+}
 
-
-/* ---------Footer--- */
+/* ---------Footer--------------------- */
 footer {
     width : 100%;
     background-color: #1f203b;
@@ -380,7 +483,7 @@ div#logo {
     width : 100px;
     height : 100px;
 }
-#tenAndlogo > h1 {
+#tenAndlogo > h2 {
     font-size: 0.8rem;
     width: 450px;
     padding : 10px;
@@ -394,7 +497,6 @@ footer i {
     padding : 5px;
 }
 .achievs {
-    padding-top : 30px 0 ;
     justify-content: left;
 }
 .achievs > i {
@@ -402,6 +504,58 @@ footer i {
     width : 50px;
 }
 .achievs > h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
+}
+footer h1 {
+    width : 50%;
+    display : block;
+    color : white;
+    font-size: 1rem;
+    padding : 5px;
+    border-bottom: 2px solid rgba(244, 235, 235, 0.401);
+    margin: 1rem 0;
+}
+footer section div {
+    margin-bottom: 1rem;
+}
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+.socialMedia a {
+    padding : 10px;
+    border-radius: 10px;
+    margin-left : 10px;
+}
+.socialMedia a > i {
+    margin : auto;
+    font-size: 1rem;
+}
+.socialMedia a:nth-of-type(1) {
+    color: blue;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+.socialMedia a:nth-of-type(2) {
+    background: #55ACEE;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+.socialMedia a:nth-of-type(3) {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+footer img {
+    width : 80%;
+    display : block;
+    margin: 0 auto;
 }

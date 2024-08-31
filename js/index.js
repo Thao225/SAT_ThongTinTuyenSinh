@@ -72,6 +72,13 @@ window.onload = function () {
         }
 
 //---------- NỘI DUNG ---------------------------------------------------------------//
+    document.querySelectorAll('.faqQuestion').forEach((item) => {
+        item.addEventListener('click', () => {
+            var faqItem = item.parentElement;
+            faqItem.classList.toggle('ac');
+        });
+    });
+
     $(".tabContent > li:not(:first-child)").hide();
     $(".tab > li > a").click(function(event) {
         event.preventDefault();
@@ -83,6 +90,7 @@ window.onload = function () {
         $(".menuContent > .tabContent").hide();
         $(h).show();
     });
+
     $(".menuXettuyen a ").click(function() {
         console.log("hi")
         $(".menuXettuyen a ").removeClass("activeSub");
@@ -91,6 +99,8 @@ window.onload = function () {
         $(".menuContent > .tabContent").hide();
         $(hh).show();
     });
+
+
 
 
 

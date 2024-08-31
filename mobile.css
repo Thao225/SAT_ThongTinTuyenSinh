@@ -113,9 +113,28 @@
     .menuXettuyen ul > li > a {
         height : 5.5rem;
         padding :1rem;
-        display: flex; 
-        justify-content: center; 
+    }
+    .bang {
+        overflow: auto;
+    }
+    .item {
+        width: calc(50% - 1rem); 
+    }
+/* <----------FOOTER----------------------> */
+    footer {
+        flex-direction: column;
         align-items: center;
-        cursor: pointer;
+    }
+    .socialMedia {
+        margin-top: 20px;
+    }
+    .socialMedia > a {
+        border-radius: 5px;
+    }
+    #lienhe {
+        text-align: center;
+    }
+    .achievs {
+        justify-content: center;
     }
 }
