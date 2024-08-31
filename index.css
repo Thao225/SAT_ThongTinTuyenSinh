@@ -5,7 +5,6 @@
 }
 :root {
     --tim : #321d5e;
-    --tieudephu : #52407b;
 }
 .flex {
     display : flex;
@@ -54,6 +53,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    z-index: -10;
 }
 .sticky {
     position: sticky;
@@ -62,17 +62,18 @@ body {
 }
 section {
     width : 100%;
-    background-color: whitesmoke;
+    padding :  0 0 0.5rem 0;
+    z-index :10;
 }
 
 /*<--------------Dau Trang------------------->*/
 .dauTrang {
-    background-color: whitesmoke;
+    background: linear-gradient(to bottom,white, black, var(--tim));
 }
 .dauTrang img {
     width : 100%;
 }
-.dauTrang > h1 {
+.dauTrang h1 {
     display : block;
     padding : 20px;
     margin : 2rem auto 1rem;
@@ -82,11 +83,12 @@ section {
     font-style: bold;
     text-align : center;
     opacity : 0;
-    color : var(--tim);
-    text-shadow: 2px 2px #af94e9;
-    animation : flyText 1s forwards infinite;
+    color : white;
+    text-shadow: 2px 2px rgb(176, 127, 235);
+    animation : Text 1s forwards infinite;
+    z-index : 10;
 }
-@keyframes flyText {
+@keyframes Text {
     from { opacity : 0 }
     to { opacity : 1 }
 }
@@ -104,11 +106,12 @@ section {
     height : 50px;
     width : 50px;
     margin : 0;
+    color : white;
 } 
 @keyframes ahihi {
     0% {
         left: 0;
-        transform: translateY(-50%) rotate(5deg);
+        transform: translateY(-250%) rotate(5deg);
     }
     20% {
         left: 20%;
@@ -116,7 +119,7 @@ section {
     }
     40% {
         left: 40%;
-        transform: translateY(-50%) rotate(5deg);
+        transform: translateY(-250%) rotate(5deg);
     }
     60% {
         left: 60%;
@@ -124,7 +127,7 @@ section {
     }
     80% {
         left: 80%;
-        transform: translateY(-50%) rotate(5deg);
+        transform: translateY(-250%) rotate(5deg);
     }
     100% {
         left: 100%;
@@ -133,12 +136,83 @@ section {
 }
 
 /*<--------------Anh gioi thieu------------------->*/
-.wapper {
-    width : 800px;
-    overflow : hidden;
+.pictureAboutUs {
+    background-color: whitesmoke;
+    width : 100%;
     margin : 0 auto;
+}
+.pictureAboutUs h1 {
+    width : 60%;
+    margin : 0 auto;
+    color : var(--tim);
+    font-size: 2rem;
+    display : block;
+    padding : 50px 20px 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.401);
+}
+.gallery {
+    width : 800px;
+    height : auto;
+    margin : 0 auto;
+    padding : 2rem 0;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.listImg {
+    transition : transform 0.5s ease-in-out;
+}
+.listImg .image{
+    width : 800px;
+    height : 500px;
 }
 .listImg img {
     width : 800px;
+    height : 400px;
+}
+.imgText {
+    font-size : 1rem;
+    font-weight: bold;
+    padding : 15px;
+}
+.btn {
+    font-size : 2rem;
+    padding : 5px;
+    color: #ffffff66;
+    cursor : pointer;
+    position: absolute;
+    top : 40%;
+}
+.btn > i:hover{
+    transform: scale(1.2);
+    color: #ffffff;
+}
+.prev {
+    left : 1rem;
+} 
+.next {
+    right : 1rem;
+}
 
+/*<--------------Noi dung trang------------------->*/
+.noiDungTrang {
+    width : 80%;
+    margin : 5rem auto;
+    width : 80%;
+    padding : 2rem 0;
+    height : auto;
+    position : relative;
+    background : whitesmoke;
+}
+.noiDungTrang::after {
+    content : " ";
+    position: absolute;
+    height : 100%;
+    width : 100%;
+    background : var(--tim);
+    top : 50%;
+    left : 50%;
+    translate: -50% -50%;
+    z-index : -1;
+    padding : 2px;
 }
