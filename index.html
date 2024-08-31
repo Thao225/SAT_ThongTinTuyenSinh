@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="mobile.css">
     <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <script src = "jquery-3.7.1.min.js"></script>
     <script src = "index.js"></script>
     <script src="https://kit.fontawesome.com/4dfce62b7e.js" crossorigin="anonymous"></script>
 
@@ -67,12 +68,15 @@
     </header>
     <!-----------------Nội dung trang-------------------------------------->
     <body class="tuyenSinh">
+        <div id = "gotoTop">^</div>
         <section class = "dauTrang">
             <img src = "img/Capture.PNG"/>
             <h1>MỞ LỐI CÔNG NGHỆ, CHINH PHỤC KHÔNG GIAN.</h1>
             <div id = "flySpace">
-                <div class = "iconAhihi flex">
+                <div class="iconAhihi">
                     <i class="fa-solid fa-shuttle-space"></i>
+                </div>
+                <div class="iconAhihi">
                     <i class="fa-solid fa-robot"></i>
                 </div>
             </div>
@@ -109,17 +113,1134 @@
             </div>
         </section>
         <section class = "noiDungTrang">
+            <h1>Thông tin tuyển sinh </h1>
             <div class="tab flex noList">
-                <li>Phương thức xét tuyển</li>
-                <li>Học phí</li>
-                <li>Chính sách miễn giảm</li>
-                <li>Học bổng</li>
+                <li><a href = "#ptXettuyen">Phương thức xét tuyển</a></li>
+                <li><a href = "#hocphi">Học phí</a></li>
+                <li><a href = "#3">Chính sách miễn giảm</a></li>
+                <li><a href = "#4">Học bổng</a></li>
             </div>
-            <div class="tabContent">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <div class="tabContent noList">
+                <li id ="ptXettuyen">
+                    <h4 class = "mota">Hiện nay, Đại học Vũ trụ và Công nghệ có 3 hình thức xét tuyển chính, 
+                        nếu sinh viên đăng kí nhiều hình thức thì nên ưu tiên chọn hình thức xét tuyển có đạt học bổng (nếu có) để xác nhận nhập học. Dưới đây là thông tin chi tiết : </h4>
+                    <div class="menuXettuyen tab">
+                        <ul class = "noList flex">
+                            <li><a href = "#pthocba">Xét học bạ THPT</a></li>
+                            <li><a href = "#ptdgnl">Xét điểm thi Đánh giá năng lực</a></li>
+                            <li><a href = "#ptdiemthi">Xét điểm thi Tốt nghiệp THPT</a></li>
+                        </ul>
+                    </div>
+                    <div class="menuContent">
+                        <div id = "pthocba" class = "tabContent undersub">
+                            <h4 class = "mota">Điều kiện xét tuyển : </h4>
+                            <ul>
+                                <li>Điểm của từng môn trong tổ hợp xét tuyển phải đạt ít nhất 8.0 điểm.</li>
+                                <li>Học lực khá hoặc giỏi.</li>
+                                <li>Cách thức xét tuyển học bạ : 
+                                Xét tuyển dựa trên điểm trung bình các môn của tổ hợp xét tuyển trong 5 kỳ, bao gồm 2 học kỳ lớp 10, 2 học kỳ lớp 11 và học kỳ 1 lớp 12.
+                                </li>
+                            </ul>
+                            <h4 class = "mota">Cụ thể điểm chuẩn như sau : </h4>
+                            <table>
+                                <tr>
+                                    <th>Mã ngành</th>
+                                    <th>Tên ngành</th>
+                                    <th>Chỉ tiêu</th>
+                                    <th>Tổ hợp xét tuyển <sup>(*)</sup></th>
+                                    <th>Điểm chuẩn</th>
+                                </tr>
+                                <tr>
+                                    <td>S11000TVH</td>
+                                    <td>Thiên văn học (Astronomy)</td>
+                                    <td>100</td>
+                                    <td>002, 004, 009</td>
+                                    <td>28.05</td>
+                                </tr>
+                                <tr>
+                                    <td>S1200KHHT</td>
+                                    <td>Khoa học hành tinh (Planetary Science)</td>
+                                    <td>100</td>
+                                    <td>001, 003, 008</td>
+                                    <td>28.05</td>
+                                </tr>
+                                <tr>
+                                    <td>S1300VLVT</td>
+                                    <td>Vật lý vũ trụ (Astrophysics)</td>
+                                    <td>150</td>
+                                    <td>001, 002, 003</td>
+                                    <td>28.05</td>
+                                </tr>
+                                <tr>
+                                    <td>A210KTTVT</td>
+                                    <td>Kỹ thuật tàu vũ trụ (Spacecraft Engineering)</td>
+                                    <td>70</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>A2200KTTL</td>
+                                    <td>Kỹ thuật tên lửa (Rocket Engineering)</td>
+                                    <td>70</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>A2300KTVT</td>
+                                    <td>Kỹ thuật vệ tinh (Satellite Engineering)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>A24KTDKTD</td>
+                                    <td>Kỹ thuật điều khiển tự động (Automation and Control Engineering)</td>
+                                    <td>70</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>T3100HTPM</td>
+                                    <td>Hệ thống phần mềm (Software Systems Engineering)</td>
+                                    <td>100</td>
+                                    <td>001, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>T32KHDLKG</td>
+                                    <td>Khoa học dữ liệu không gian (Space Data Science)</td>
+                                    <td>90</td>
+                                    <td>001, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>T33ANMTKG</td>
+                                    <td>An ninh mạng trong không gian (Space Cybersecurity)</td>
+                                    <td>50</td>
+                                    <td>001, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>A4100TTNT</td>
+                                    <td>Trí tuệ nhân tạo (Artificial Intelligence - AI)</td>
+                                    <td>60</td>
+                                    <td>001, 008</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>A4200RHKG</td>
+                                    <td>Robot học không gian (Space Robotics)</td>
+                                    <td>60</td>
+                                    <td>001, 008</td>
+                                    <td>29.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A43000TDH</td>
+                                    <td>Tự động hóa  (Automation)</td>
+                                    <td>70</td>
+                                    <td>001, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>O5100KTKG</td>
+                                    <td>Kinh tế không gian (Space Economics)</td>
+                                    <td>40</td>
+                                    <td>008, 009, 006</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>O52QLDAKG</td>
+                                    <td>Quản lí dự án không gian (Space Project Management)</td>
+                                    <td>40</td>
+                                    <td>008, 009, 006</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>O53000LKG</td>
+                                    <td>Luật không gian (Space Law)</td>
+                                    <td>50</td>
+                                    <td>008, 009, 006</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>T6100PTDL</td>
+                                    <td>Phân tích dữ liệu (Data Analytics)</td>
+                                    <td>40</td>
+                                    <td>001, 008</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A6200MHKG</td>
+                                    <td>Mô hình không gian (Spatial Modeling)</td>
+                                    <td>40</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>S63DLHVDL</td>
+                                    <td>Động lực học và Qũy đạo (Dynamics and Orbital Mechanics)</td>
+                                    <td>30</td>
+                                    <td>001, 002, 003, 004</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>S640TNVKT</td>
+                                    <td>Tài nguyên và khai thác không gian (Space Resources and Mining)</td>
+                                    <td>60</td>
+                                <td>001, 005, 007</td>
+                                <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A7500TKGD</td>
+                                    <td>Thiết kế giao diện không gian (Space Interface Design)</td>
+                                    <td>60</td>
+                                    <td>010, 011, 012</td>
+                                    <td>29.25</td>
+                                </tr>
+                                <tr>
+                                    <td>A720MPVTT</td>
+                                    <td>Mô phỏng và tái tạo vũ trụ (Cosmic Simulation and Recreation)</td>
+                                    <td>90</td>
+                                    <td>001, 012</td>
+                                    <td>29.25</td>
+                                </tr>
+                                <tr>
+                                    <td>A7300MPNV</td>
+                                    <td>Mô phỏng nhiệm vụ không gian (Space Mission Simulation)</td>
+                                    <td>90</td>
+                                    <td>001, 012</td>
+                                    <td>29.25</td>
+                                </tr>
+                                <tr>
+                                    <td>A740UDTTA</td>
+                                    <td>Ứng dụng thực tế ảo (Virtual Reality Applications) </td>
+                                    <td>50</td>
+                                    <td>001, 008, 012</td>
+                                    <td>29.25</td>
+                                </tr>
+                                <tr>
+                                    <td>S8100NLTT</td>
+                                    <td>Nặng lượng tái tạo (Renewable Energy)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>S8200HNTH</td>
+                                    <td>Năng lượng hạt nhân và thiên thạch (Nuclear Energy and Asteroids)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>S83000NDH</td>
+                                    <td>Nhiệt động học  (Thermodynamics)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>S8400HTNL</td>
+                                    <td>Hệ thống năng lượng (Energy Systems)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>O910000YH</td>
+                                    <td>Y học không gian (Space Medicine)</td>
+                                    <td>100</td>
+                                    <td>005</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>O920000SH</td>
+                                    <td>Sinh học không gian (Space Biology)</td>
+                                    <td>90</td>
+                                    <td>005</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>O930000DD</td>
+                                    <td>Dinh dưỡng trong không gian(Space Nutrition) </td>
+                                    <td>70</td>
+                                    <td>005</td>
+                                    <td>29.75</td>
+                                </tr>
+                                <tr>
+                                    <td>O9400YTTX</td>
+                                    <td>Y tế từ xa (Telemedicine)</td>
+                                    <td>70</td>
+                                    <td>005</td>
+                                    <td>29.75</td>
+                                </tr>
+                            </table>
+                            <h4 class = "mota">Chú thích (*):</h4>
+                            <ul style = "list-style-type: square;">
+                                    <li>001 : Toán – Vật lí – Hóa học</li>
+                                    <li>002 : Toán – Vật lí – Địa lí</li>
+                                    <li>003 : Toán – Vật lí – Sinh học</li>
+                                    <li>004 : Toán – Hóa học – Địa lí</li>
+                                    <li>005 : Toán – Hóa học – Sinh học</li>
+                                    <li>006 : Toán – KH tự nhiên – Giáo dục công dân</li>
+                                    <li>007 : Hóa học– Sinh học – Khoa học xã hội</li>
+                                    <li>008 : Toán – Khoa học tự nhiên – 1 Ngoại ngữ</li>
+                                    <li>009 : Toán – Khoa học xã hội – 1 Ngoại ngữ</li>
+                                    <li>010 : Toán - Năng khiếu vẽ 1 – Năng khiếu vẽ  2</li>
+                                    <li>011 : Vật lý - Năng khiếu vẽ 1 – Năng khiếu vẽ  2</li>
+                                    <li>012 : Toán - Vật lý – Năng khiếu vẽ </li>
+                            </ul>
+                        </div>
+                        <div id = "ptdgnl" class = "tabContent undersub">
+                            <h4 class = "mota">Điều kiện xét tuyển : </h4>
+                            <ul>
+                                <li>Thí sinh tham gia kì thi Đánh giá năng lực được tổ chức bởi đại học Quốc gia thành phố Hồ Chí Minh.</li>
+                                <li>Nếu thí sinh tham gia 2 đợt thì sẽ lấy điểm cao nhất.</li>
+                            </ul>
+                            <h4 class = "mota">Cụ thể điểm chuẩn như sau : </h4>
+                            <table>
+                                <tr>
+                                    <th>Mã ngành</th>
+                                    <th>Tên ngành</th>
+                                    <th>Chỉ tiêu</th>
+                                    <th>Điểm chuẩn</th>
+                                </tr>
+                                <tr>
+                                    <td>S11000TVH</td>
+                                    <td>Thiên văn học (Astronomy)</td>
+                                    <td>100</td>
+                                    <td>920</td>
+                                </tr>
+                                <tr>
+                                    <td>S1200KHHT</td>
+                                    <td>Khoa học hành tinh (Planetary Science)</td>
+                                    <td>100</td>
+                                    <td>920</td>
+                                </tr>
+                                <tr>
+                                    <td>S1300VLVT</td>
+                                    <td>Vật lý vũ trụ (Astrophysics)</td>
+                                    <td>150</td>
+                                    <td>935</td>
+                                </tr>
+                                <tr>
+                                    <td>A210KTTVT</td>
+                                    <td>Kỹ thuật tàu vũ trụ (Spacecraft Engineering)</td>
+                                    <td>70</td>
+                                    <td>950</td>
+                                </tr>
+                                <tr>
+                                    <td>A2200KTTL</td>
+                                    <td>Kỹ thuật tên lửa (Rocket Engineering)</td>
+                                    <td>70</td>
+                                    <td>950</td>
+                                </tr>
+                                <tr>
+                                    <td>A2300KTVT</td>
+                                    <td>Kỹ thuật vệ tinh (Satellite Engineering)</td>
+                                    <td>50</td>
+                                    <td>950</td>
+                                </tr>
+                                <tr>
+                                    <td>A24KTDKTD</td>
+                                    <td>Kỹ thuật điều khiển tự động (Automation and Control Engineering)</td>
+                                    <td>70</td>
+                                    <td>950</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>T3100HTPM</td>
+                                    <td>Hệ thống phần mềm (Software Systems Engineering)</td>
+                                    <td>100</td>
+                                    <td>950</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>T32KHDLKG</td>
+                                    <td>Khoa học dữ liệu không gian (Space Data Science)</td>
+                                    <td>90</td>
+                                    <td>920</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>T33ANMTKG</td>
+                                    <td>An ninh mạng trong không gian (Space Cybersecurity)</td>
+                                    <td>50</td>
+                                    <td>920</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>A4100TTNT</td>
+                                    <td>Trí tuệ nhân tạo (Artificial Intelligence - AI)</td>
+                                    <td>60</td>
+                                    <td>950</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>A4200RHKG</td>
+                                    <td>Robot học không gian (Space Robotics)</td>
+                                    <td>60</td>
+                                    <td>950</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>A43000TDH</td>
+                                    <td>Tự động hóa  (Automation)</td>
+                                    <td>70</td>
+                                    <td>950</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>O5100KTKG</td>
+                                    <td>Kinh tế không gian (Space Economics)</td>
+                                    <td>40</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>O52QLDAKG</td>
+                                    <td>Quản lí dự án không gian (Space Project Management)</td>
+                                    <td>40</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>O53000LKG</td>
+                                    <td>Luật không gian (Space Law)</td>
+                                    <td>50</td>
+                                    <td>935</td>
+                                </tr>
+                                <tr>
+                                    <td>T6100PTDL</td>
+                                    <td>Phân tích dữ liệu (Data Analytics)</td>
+                                    <td>40</td>
+                                    <td>920</td>
+                                </tr>
+                                <tr>
+                                    <td>A6200MHKG</td>
+                                    <td>Mô hình không gian (Spatial Modeling)</td>
+                                    <td>40</td>
+                                    <td>920</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>S63DLHVDL</td>
+                                    <td>Động lực học và Qũy đạo (Dynamics and Orbital Mechanics)</td>
+                                    <td>30</td>
+                                    <td>920</td>
+                                </tr>
+                                <tr>
+                                    <td>S640TNVKT</td>
+                                    <td>Tài nguyên và khai thác không gian (Space Resources and Mining)</td>
+                                    <td>60</td>
+                                    <td>920</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>A7500TKGD</td>
+                                    <td>Thiết kế giao diện không gian (Space Interface Design)</td>
+                                    <td>60</td>
+                                    <td>935</td>
+                                </tr>
+                                <tr>
+                                    <td>A720MPVTT</td>
+                                    <td>Mô phỏng và tái tạo vũ trụ (Cosmic Simulation and Recreation)</td>
+                                    <td>90</td>
+                                    <td>935</td>
+                                </tr>
+                                <tr>
+                                    <td>A7300MPNV</td>
+                                    <td>Mô phỏng nhiệm vụ không gian (Space Mission Simulation)</td>
+                                    <td>90</td>
+                                    <td>935</td>
+                                </tr>
+                                <tr>
+                                    <td>A740UDTTA</td>
+                                    <td>Ứng dụng thực tế ảo (Virtual Reality Applications) </td>
+                                    <td>50</td>
+                                    <td>935</td>
+                                </tr>
+                                <tr>
+                                    <td>S8100NLTT</td>
+                                    <td>Năng lượng tái tạo (Renewable Energy)</td>
+                                    <td>50</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>S8200HNTH</td>
+                                    <td>Năng lượng hạt nhân và thiên thạch (Nuclear Energy and Asteroids)</td>
+                                    <td>50</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>S83000NDH</td>
+                                    <td>Nhiệt động học  (Thermodynamics)</td>
+                                    <td>50</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>S8400HTNL</td>
+                                    <td>Hệ thống năng lượng (Energy Systems)</td>
+                                    <td>50</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>O910000YH</td>
+                                    <td>Y học không gian (Space Medicine)</td>
+                                    <td>100</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>O920000SH</td>
+                                    <td>Sinh học không gian (Space Biology)</td>
+                                    <td>90</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>O930000DD</td>
+                                    <td>Dinh dưỡng trong không gian(Space Nutrition) </td>
+                                    <td>70</td>
+                                    <td>900</td>
+                                </tr>
+                                <tr>
+                                    <td>O9400YTTX</td>
+                                    <td>Y tế từ xa (Telemedicine)</td>
+                                    <td>70</td>
+                                    <td>900</td>
+                                </tr>
+                            </table>  
+                        </div>
+                        <div id = "ptdiemthi" class = "tabContent undersub">
+                            <h4 class = "mota">Điều kiện xét tuyển : </h4>
+                            <ul>
+                                <li>Thí sinh đạt đủ điều kiện tốt nghiệp THPT.</li>
+                                <li>Điểm của từng môn trong tổ hợp xét tuyển phải đạt ít nhất 8.0 điểm.</li>
+                            </ul>
+                            <h4 class = "mota">Cụ thể điểm chuẩn như sau : </h4>
+                            <table>
+                                <tr>
+                                    <th>Mã ngành</th>
+                                    <th>Tên ngành</th>
+                                    <th>Chỉ tiêu</th>
+                                    <th>Tổ hợp xét tuyển <sup>(*)</sup></th>
+                                    <th>Điểm chuẩn</th>
+                                </tr>
+                                <tr>
+                                    <td>S11000TVH</td>
+                                    <td>Thiên văn học (Astronomy)</td>
+                                    <td>100</td>
+                                    <td>002, 004, 009</td>
+                                    <td>27.30</td>
+                                </tr>
+                                <tr>
+                                    <td>S1200KHHT</td>
+                                    <td>Khoa học hành tinh (Planetary Science)</td>
+                                    <td>100</td>
+                                    <td>001, 003, 008</td>
+                                    <td>27.30</td>
+                                </tr>
+                                <tr>
+                                    <td>S1300VLVT</td>
+                                    <td>Vật lý vũ trụ (Astrophysics)</td>
+                                    <td>150</td>
+                                    <td>001, 002, 003</td>
+                                    <td>27.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A210KTTVT</td>
+                                    <td>Kỹ thuật tàu vũ trụ (Spacecraft Engineering)</td>
+                                    <td>70</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>A2200KTTL</td>
+                                    <td>Kỹ thuật tên lửa (Rocket Engineering)</td>
+                                    <td>70</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>A2300KTVT</td>
+                                    <td>Kỹ thuật vệ tinh (Satellite Engineering)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>A24KTDKTD</td>
+                                    <td>Kỹ thuật điều khiển tự động (Automation and Control Engineering)</td>
+                                    <td>70</td>
+                                    <td>001, 003, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>T3100HTPM</td>
+                                    <td>Hệ thống phần mềm (Software Systems Engineering)</td>
+                                    <td>100</td>
+                                    <td>001, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>T32KHDLKG</td>
+                                    <td>Khoa học dữ liệu không gian (Space Data Science)</td>
+                                    <td>90</td>
+                                    <td>001, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>T33ANMTKG</td>
+                                    <td>An ninh mạng trong không gian (Space Cybersecurity)</td>
+                                    <td>50</td>
+                                    <td>001, 008</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>A4100TTNT</td>
+                                    <td>Trí tuệ nhân tạo (Artificial Intelligence - AI)</td>
+                                    <td>60</td>
+                                    <td>001, 008</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>A4200RHKG</td>
+                                    <td>Robot học không gian (Space Robotics)</td>
+                                    <td>60</td>
+                                    <td>001, 008</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>A43000TDH</td>
+                                    <td>Tự động hóa  (Automation)</td>
+                                    <td>70</td>
+                                    <td>001, 008</td>
+                                    <td>28.75</td>
+                                </tr>
+                                <tr>
+                                    <td>O5100KTKG</td>
+                                    <td>Kinh tế không gian (Space Economics)</td>
+                                    <td>40</td>
+                                    <td>008, 009, 006</td>
+                                    <td>28.00</td>
+                                </tr>
+                                <tr>
+                                    <td>O52QLDAKG</td>
+                                    <td>Quản lí dự án không gian (Space Project Management)</td>
+                                    <td>40</td>
+                                    <td>008, 009, 006</td>
+                                    <td>28.00</td>
+                                </tr>
+                                <tr>
+                                    <td>O53000LKG</td>
+                                    <td>Luật không gian (Space Law)</td>
+                                    <td>50</td>
+                                    <td>008, 009, 006</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>T6100PTDL</td>
+                                    <td>Phân tích dữ liệu (Data Analytics)</td>
+                                    <td>40</td>
+                                    <td>001, 008</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A6200MHKG</td>
+                                    <td>Mô hình không gian (Spatial Modeling)</td>
+                                    <td>40</td>
+                                    <td>001, 003, 008</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>S63DLHVDL</td>
+                                    <td>Động lực học và Qũy đạo (Dynamics and Orbital Mechanics)</td>
+                                    <td>30</td>
+                                    <td>001, 002, 003, 004</td>
+                                    <td>28.25</td>
+                                </tr>
+                                <tr>
+                                    <td>S640TNVKT</td>
+                                    <td>Tài nguyên và khai thác không gian (Space Resources and Mining)</td>
+                                    <td>60</td>
+                                <td>001, 005, 007</td>
+                                <td>28.25</td>
+                                </tr>
+                                <tr>
+                                    <td>A7500TKGD</td>
+                                    <td>Thiết kế giao diện không gian (Space Interface Design)</td>
+                                    <td>60</td>
+                                    <td>010, 011, 012</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A720MPVTT</td>
+                                    <td>Mô phỏng và tái tạo vũ trụ (Cosmic Simulation and Recreation)</td>
+                                    <td>90</td>
+                                    <td>001, 012</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A7300MPNV</td>
+                                    <td>Mô phỏng nhiệm vụ không gian (Space Mission Simulation)</td>
+                                    <td>90</td>
+                                    <td>001, 012</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>A740UDTTA</td>
+                                    <td>Ứng dụng thực tế ảo (Virtual Reality Applications) </td>
+                                    <td>50</td>
+                                    <td>001, 008, 012</td>
+                                    <td>28.50</td>
+                                </tr>
+                                <tr>
+                                    <td>S8100NLTT</td>
+                                    <td>Nặng lượng tái tạo (Renewable Energy)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.00</td>
+                                </tr>
+                                <tr>
+                                    <td>S8200HNTH</td>
+                                    <td>Năng lượng hạt nhân và thiên thạch (Nuclear Energy and Asteroids)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.00</td>
+                                </tr>
+                                <tr>
+                                    <td>S83000NDH</td>
+                                    <td>Nhiệt động học  (Thermodynamics)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.00</td>
+                                </tr>
+                                <tr>
+                                    <td>S8400HTNL</td>
+                                    <td>Hệ thống năng lượng (Energy Systems)</td>
+                                    <td>50</td>
+                                    <td>001, 003, 005, 008</td>
+                                    <td>28.00</td>
+                                </tr>
+                                <tr>
+                                    <td>O910000YH</td>
+                                    <td>Y học không gian (Space Medicine)</td>
+                                    <td>100</td>
+                                    <td>005</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>O920000SH</td>
+                                    <td>Sinh học không gian (Space Biology)</td>
+                                    <td>90</td>
+                                    <td>005</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>O930000DD</td>
+                                    <td>Dinh dưỡng trong không gian(Space Nutrition) </td>
+                                    <td>70</td>
+                                    <td>005</td>
+                                    <td>29.00</td>
+                                </tr>
+                                <tr>
+                                    <td>O9400YTTX</td>
+                                    <td>Y tế từ xa (Telemedicine)</td>
+                                    <td>70</td>
+                                    <td>005</td>
+                                    <td>29.00</td>
+                                </tr>
+                            </table>
+                            <h4 class = "mota">Chú thích (*):</h4>
+                            <ul style = "list-style-type: square;">
+                                    <li>001 : Toán – Vật lí – Hóa học</li>
+                                    <li>002 : Toán – Vật lí – Địa lí</li>
+                                    <li>003 : Toán – Vật lí – Sinh học</li>
+                                    <li>004 : Toán – Hóa học – Địa lí</li>
+                                    <li>005 : Toán – Hóa học – Sinh học</li>
+                                    <li>006 : Toán – KH tự nhiên – Giáo dục công dân</li>
+                                    <li>007 : Hóa học– Sinh học – Khoa học xã hội</li>
+                                    <li>008 : Toán – Khoa học tự nhiên – 1 Ngoại ngữ</li>
+                                    <li>009 : Toán – Khoa học xã hội – 1 Ngoại ngữ</li>
+                                    <li>010 : Toán - Năng khiếu vẽ 1 – Năng khiếu vẽ  2</li>
+                                    <li>011 : Vật lý - Năng khiếu vẽ 1 – Năng khiếu vẽ  2</li>
+                                    <li>012 : Toán - Vật lý – Năng khiếu vẽ </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li id = "hocphi">
+                    <h4 class="mota">Đại học Vũ trụ và Công nghệ cung cấp thông tin chi tiết về học phí cho các ngành học chính quy hệ đại trà và chất lượng cao. Bảng học phí liệt kê mã ngành, tên ngành, số tín chỉ yêu cầu và mức học phí trên mỗi tín chỉ.
+                        Sinh viên có thể tra cứu học phí của ngành mình quan tâm để lập kế hoạch tài chính cho quá trình học tập. Dưới đây là thông tin chi tiết : </h4>
+                    <div class="menuXettuyen tab">
+                        <ul class = "noList flex">
+                            <li><a href = "#hpchinhquy">Học phí hệ chính quy</a></li>
+                            <li><a href = "#hpdacbiet">Học phí hệ đào tạo đặc biệt</a></li>
+                            <li><a href = "#luuY">Các lưu ý về học phí</a></li>
+                        </ul>
+                    </div>
+                    <div class="menuContent">
+                        <div id = "hpchinhquy" class = "tabContent undersub">
+                           <div class="menuXettuyen tab"><h3> Bảng học phí hệ Chính quy (đại trà) :</h3>
+                                <table>
+                                    <tr>
+                                        <th>Mã ngành</th>
+                                        <th>Tên ngành</th>
+                                        <th>Số tín chỉ</th>
+                                        <th>Giá theo tín chỉ (/1 tín)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>S11000TVH</td>
+                                        <td>Thiên văn học (Astronomy)</td>
+                                        <td>195</td>
+                                        <td>2.500.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S1200KHHT</td>
+                                        <td>Khoa học hành tinh (Planetary Science)</td>
+                                        <td>190</td>
+                                        <td>2.200.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S1300VLVT</td>
+                                        <td>Vật lý vũ trụ (Astrophysics)</td>
+                                        <td>190</td>
+                                        <td>2.200.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A210KTTVT</td>
+                                        <td>Kỹ thuật tàu vũ trụ (Spacecraft Engineering)</td>
+                                        <td>195</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2200KTTL</td>
+                                        <td>Kỹ thuật tên lửa (Rocket Engineering)</td>
+                                        <td>190</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2300KTVT</td>
+                                        <td>Kỹ thuật vệ tinh (Satellite Engineering)</td>
+                                        <td>198</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A24KTDKTD</td>
+                                        <td>Kỹ thuật điều khiển tự động (Automation and Control Engineering)</td>
+                                        <td>200</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>T3100HTPM</td>
+                                        <td>Hệ thống phần mềm (Software Systems Engineering)</td>
+                                        <td>186</td>
+                                        <td>2.350.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>T32KHDLKG</td>
+                                        <td>Khoa học dữ liệu không gian (Space Data Science)</td>
+                                        <td>180</td>
+                                        <td>2.350.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>T33ANMTKG</td>
+                                        <td>An ninh mạng trong không gian (Space Cybersecurity)</td>
+                                        <td>178</td>
+                                        <td>2.350.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A4100TTNT</td>
+                                        <td>Trí tuệ nhân tạo (Artificial Intelligence - AI)</td>
+                                        <td>100</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A4200RHKG</td>
+                                        <td>Robot học không gian (Space Robotics)</td>
+                                        <td>210</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A43000TDH</td>
+                                        <td>Tự động hóa  (Automation)</td>
+                                        <td>195</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O5100KTKG</td>
+                                        <td>Kinh tế không gian (Space Economics)</td>
+                                        <td>175</td>
+                                        <td>2.000.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O52QLDAKG</td>
+                                        <td>Quản lí dự án không gian (Space Project Management)</td>
+                                        <td>175</td>
+                                        <td>2.000.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O53000LKG</td>
+                                        <td>Luật không gian (Space Law)</td>
+                                        <td>175</td>
+                                        <td>2.000.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>T6100PTDL</td>
+                                        <td>Phân tích dữ liệu (Data Analytics)</td>
+                                        <td>178</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A6200MHKG</td>
+                                        <td>Mô hình không gian (Spatial Modeling)</td>
+                                        <td>210</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S63DLHVDL</td>
+                                        <td>Động lực học và Qũy đạo (Dynamics and Orbital Mechanics)</td>
+                                        <td>205</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S640TNVKT</td>
+                                        <td>Tài nguyên và khai thác không gian (Space Resources and Mining)</td>
+                                        <td>190</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A7500TKGD</td>
+                                        <td>Thiết kế giao diện không gian (Space Interface Design)</td>
+                                        <td>195</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A720MPVTT</td>
+                                        <td>Mô phỏng và tái tạo vũ trụ (Cosmic Simulation and Recreation)</td>
+                                        <td>215</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A7300MPNV</td>
+                                        <td>Mô phỏng nhiệm vụ không gian (Space Mission Simulation)</td>
+                                        <td>210</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A740UDTTA</td>
+                                        <td>Ứng dụng thực tế ảo (Virtual Reality Applications) </td>
+                                        <td>205</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S8100NLTT</td>
+                                        <td>Nặng lượng tái tạo (Renewable Energy)</td>
+                                        <td>190</td>
+                                        <td>2.200.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S8200HNTH</td>
+                                        <td>Năng lượng hạt nhân và thiên thạch (Nuclear Energy and Asteroids)</td>
+                                        <td>190</td>
+                                        <td>2.200.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S83000NDH</td>
+                                        <td>Nhiệt động học  (Thermodynamics)</td>
+                                        <td>190</td>
+                                        <td>2.400.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S8400HTNL</td>
+                                        <td>>Hệ thống năng lượng (Energy Systems)</td>
+                                        <td>195</td>
+                                        <td>2.400.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O910000YH</td>
+                                        <td>Y học không gian (Space Medicine)</td>
+                                        <td>250</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O920000SH</td>
+                                        <td>Sinh học không gian (Space Biology)</td>
+                                        <td>230</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O930000DD</td>
+                                        <td>Dinh dưỡng trong không gian(Space Nutrition) </td>
+                                        <td>230</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O9400YTTX</td>
+                                        <td>Y tế từ xa (Telemedicine)</td>
+                                        <td>230</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                </table>
+                           </div>
+                       </div>
+                       <div id = "hpdacbiet" class = "tabContent undersub">
+                           <div class="menuXettuyen"><h3> Bảng học phí hệ Đào tạo đặc biệt :</h3>
+                                <table>
+                                    <tr>
+                                        <th>Mã ngành</th>
+                                        <th>Tên ngành</th>
+                                        <th>Số tín chỉ</th>
+                                        <th>Giá theo tín chỉ (/1 tín)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>A210KTTVT_C</td>
+                                        <td>Kỹ thuật tàu vũ trụ (Spacecraft Engineering)</td>
+                                        <td>240</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2200KTTL_C</td>
+                                        <td>Kỹ thuật tên lửa (Rocket Engineering)</td>
+                                        <td>245</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A2300KTVT_C</td>
+                                        <td>Kỹ thuật vệ tinh (Satellite Engineering)</td>
+                                        <td>245</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A24KTDKTD_C</td>
+                                        <td>Kỹ thuật điều khiển tự động (Automation and Control Engineering)</td>
+                                        <td>250</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A4100TTNT_C</td>
+                                        <td>Trí tuệ nhân tạo (Artificial Intelligence - AI)</td>
+                                        <td>255</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A4200RHKG_C</td>
+                                        <td>Robot học không gian (Space Robotics)</td>
+                                        <td>235</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A43000TDH_C</td>
+                                        <td>Tự động hóa  (Automation)</td>
+                                        <td>240</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O53000LKG_C</td>
+                                        <td>Luật không gian (Space Law)</td>
+                                        <td>245</td>
+                                        <td>2.000.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A7500TKGD_C</td>
+                                        <td>Thiết kế giao diện không gian (Space Interface Design)</td>
+                                        <td>255</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A720MPVTT_C</td>
+                                        <td>Mô phỏng và tái tạo vũ trụ (Cosmic Simulation and Recreation)</td>
+                                        <td>245</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A7300MPNV_C</td>
+                                        <td>Mô phỏng nhiệm vụ không gian (Space Mission Simulation)</td>
+                                        <td>255</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>A740UDTTA_C</td>
+                                        <td>Ứng dụng thực tế ảo (Virtual Reality Applications) </td>
+                                        <td>240</td>
+                                        <td>2.700.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O910000YH_C</td>
+                                        <td>Y học không gian (Space Medicine)</td>
+                                        <td>300</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O920000SH_C</td>
+                                        <td>Sinh học không gian (Space Biology)</td>
+                                        <td>280</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O930000DD_C</td>
+                                        <td>Dinh dưỡng trong không gian(Space Nutrition) </td>
+                                        <td>280</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>O9400YTTX_C</td>
+                                        <td>Y tế từ xa (Telemedicine)</td>
+                                        <td>280</td>
+                                        <td>2.500.000đ</td>
+                                    </tr>
+            
+                                </table>
+                            </div>
+                        </div>
+                        <div id = "luuY" class= "tabContent undersub" ><h3></h3>
+                            <div class="menuXettyen">
+                                <h4 class = "mota">Nhằm giúp sinh viên và phụ huynh hiểu rõ hơn về các khoản phí và cách thức thanh toán. Dưới đây là một số lưu ý phổ biến:</h4>
+                                    <ul>
+                                        <li>- Học phí được áp dụng cho từng năm học hoặc học kỳ, có thể thay đổi trong các năm tiếp theo.</li>
+                                        <li>- Học phí có thể khác nhau giữa các chương trình đào tạo (đại trà, chất lượng cao,...).</li>
+                                    </ul>
+                                    <p>- Thời hạn đóng học phí:</p>
+                                        <ul class = "plusList">
+                                            <li>Sau khi bắt đầu học kỳ mới 2 tuần. Việc chậm nộp có thể dẫn đến các khoản phạt hoặc không được phép tham gia thi cuối kỳ.</li>
+                                        </ul>
+                                    <p>- Chính sách miễn, giảm học phí:</p>
+                                        <ul class = "plusList">
+                                            <li>Đối tượng và quy trình để được miễn, giảm học phí xem thêm tại mục <a href = "#miengiam">Chính sách miễn giảm học phí</a></li>
+                                        </ul>
+                                    <p>- Phí khác ngoài học phí:</p>
+                                        <ul class = "plusList">
+                                            <li>Ngoài học phí, sinh viên có thể phải đóng thêm các khoản phí khác như phí tài liệu, phí thí nghiệm, phí bảo hiểm y tế, v.v.</li>
+                                        </ul>
+                                    <p>- Chính sách hoàn trả học phí:</p>    
+                                        <ul class = "plusList">
+                                            <li>Điều kiện và quy trình hoàn trả học phí nếu sinh viên xin nghỉ học, bảo lưu kết quả học tập hoặc chuyển trường.</li>
+                                        </ul>
+                                    <p>- Phương thức thanh toán:</p>
+                                        <ul class = "plusList">
+                                            <li>Các phương thức thanh toán học phí có thể bao gồm chuyển khoản ngân hàng, nộp trực tiếp tại trường, hoặc thanh toán online qua cổng thông tin sinh viên.</li>
+                                        </ul>
+                                    <p>- Mức phí cho các năm tiếp theo:</p>
+                                        <ul class = "plusList">
+                                            <li>Học phí có thể tăng lên trong các năm tiếp theo, mức tăng không quá 200.000đ/ tín chỉ</li>
+                                        </ul>
+                                    <p>- Học phí không bao gồm chi phí sinh hoạt:</p>
+                                        <ul class = "plusList">
+                                            <li>Học phí không bao gồm các chi phí sinh hoạt như tiền ăn, ở, sách vở, đi lại. Sinh viên cần chuẩn bị tài chính cho các khoản chi này riêng biệt.</li>
+                                        </ul>
+                                    <p>- Học phí theo tín chỉ:</p>
+                                        <ul class = "plusList">
+                                            <li>Nếu tính học phí theo số tín chỉ, cần lưu ý số tiền phải trả sẽ phụ thuộc vào số tín chỉ mà sinh viên đăng ký trong mỗi học kỳ.</li>
+                                        </ul>
+                                    <p>- Lưu ý về ngoại lệ và tình huống đặc biệt:</p>
+                                        <ul class = "plusList">
+                                            <li>Trường có thể đưa ra các điều khoản về học phí cho các tình huống đặc biệt như học lại, học bổ sung, hoặc các môn học ngoài chương trình.</li>
+                                        </ul>
+                                <h4 class = "mota">Những lưu ý này giúp sinh viên và phụ huynh có cái nhìn rõ ràng và chính xác hơn về các chi phí học tập, 
+                                tránh những hiểu lầm không đáng có và đảm bảo việc thanh toán diễn ra suôn sẻ.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id = "3">3</li>
+                <li id = "4">4</li>
             </div>
         </section>
         </body>

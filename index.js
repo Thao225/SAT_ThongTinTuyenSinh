@@ -10,8 +10,15 @@ console.log(scrollY);
         stickymenu.style.opacity = 1; 
     }
 }
-  
+ 
 window.onload = function () {
+//---------- FO TO TOP --------------------------------------------------------------------//
+    let goTop =document.getElementById("gotoTop")
+    goTop.onclick = function() {
+        document.documentElement.scrollIntoView({ //dùng để cuộn trang đến một phần tử cụ thể
+            behavior: 'smooth'
+        });
+    }
 
 //---------- RESPONSIVE THANHMENU -----------------------------------------------------------//
     let btn = document.querySelector("#menuBtn")
@@ -26,8 +33,10 @@ window.onload = function () {
 //---------- ẢNH GIỚI THIỆU ---------------------------------------------------------------//
     let listImg = document.querySelector(".listImg")
     let imageGT = document.querySelectorAll(".gallery .image")
+    let gallery = document.querySelector(".gallery")
     var current = 0;
-    var w = 800;
+    var w = gallery.offsetWidth;
+    console.log(w);
     const changeImg = function() {
         if (current == imageGT.length-1) {
             listImg.style.transition = 'transform 0s';
@@ -47,6 +56,7 @@ window.onload = function () {
             clearInterval(clear);
             if (current == 0) {
                 current = imageGT.length-1; 
+                listImg.style.transition = 'transform 0s';
                 listImg.style.transform = `translateX(${-w * current}px)`;
             }
             else {
@@ -60,7 +70,25 @@ window.onload = function () {
             changeImg();
             clear = setInterval(() => { changeImg()}, 2500);
         }
-//---------- ẢNH GIỚI THIỆU ---------------------------------------------------------------//
+
+//---------- NỘI DUNG ---------------------------------------------------------------//
+    $(".tabContent > li:not(:first-child)").hide();
+    $(".tab > li > a").click(function() {
+        $(".tab > li > a").removeClass("active");
+        $(this).addClass("active");
+        let h = $(this).attr("href");
+        $(".tabContent > li").hide();
+        $(h).show();
+    });
+    $(".menuXettuyen a ").click(function() {
+        console.log("hi")
+        $(".menuXettuyen a ").removeClass("activeSub");
+        $(this).addClass("activeSub");
+        let hh = $(this).attr("href");
+        $(".menuContent > .tabContent").hide();
+        $(hh).show();
+    });
+
 
 
 

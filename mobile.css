@@ -16,7 +16,7 @@
         --tieudephu : #52407b;
     }
     
-/* <----------THANH MENU START------------------------> */
+/* <----------THANH MENU-----------------------> */
     .thanhmenu {
         display : none;
         width : 100vw;
@@ -68,11 +68,44 @@
         display : block;
     }
 
-/* <----------DAU TRANG  START----------------------> */
+/* <----------DAU TRANG----------------------> */
     #flySpace {
         display : none;
     }
 
-/* <----------DAU TRANG  START----------------------> */
-
+/* <----------ANH GIOI THIEU----------------------> */
+    .pictureAboutUs h1 {
+        width : 60%;
+        margin : 0 auto;
+        color : var(--tim);
+        font-size: 1.5rem;
+        display : block;
+        padding : 5px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.401);
+    }
+    .gallery {
+        width : 200px;
+        margin : 0 auto;
+    }
+    .listImg {
+        width : 100%;
+    }
+    .listImg .image{
+        /* width : 200px; */
+        flex: 0 0 200px;
+        height : 100px;
+    }
+    .listImg img {
+        width : 200px;
+        height : 80px;
+    }
+    .imgText {
+        font-size : 0.5rem;
+        font-weight: bold;
+        padding : 15px;
+    }
+    .btn {
+        padding : 0px;
+        font-size : 0.5rem;
+    }
 }

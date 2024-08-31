@@ -156,37 +156,45 @@ ul.submenu > li > a:hover {
 }
 .iconAhihi { 
     position: absolute;
-    animation: ahihi 3s linear infinite;
-}
+    /* animation: ahihi 3s linear infinite;*/
+} 
 .iconAhihi > i {
     height : 50px;
     width : 50px;
     margin : 0;
+    opacity : 0;
+    animation: ahihi 3s linear infinite;
 } 
 @keyframes ahihi {
     0% {
         left: 0;
         transform: translateY(-50%) rotate(0deg);
+        opacity: 0; 
     }
     20% {
         left: 20%;
         transform: translateY(-50%) rotate(5deg);
+        opacity: 0.5; 
     }
     40% {
         left: 40%;
         transform: translateY(-50%) rotate(-5deg);
+        opacity: 1; 
     }
     60% {
         left: 60%;
         transform: translateY(-50%) rotate(5deg);
+        opacity: 0; 
     }
     80% {
         left: 80%;
         transform: translateY(-50%) rotate(-5deg);
+        opacity: 0.5; 
     }
     100% {
         left: 100%;
         transform: translateY(-50%) rotate(0deg);
+        opacity: 1; 
     }
 }
 .anhGioiThieu {
