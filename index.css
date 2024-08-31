@@ -209,9 +209,8 @@ section {
 
 /*<--------------Noi dung trang------------------->*/
 .noiDungTrang {
-    width : 80%;
+    width : 100%;
     margin : 0 auto;
-    width : 80%;
     padding : 2rem 0;
     position : relative;
     background : linear-gradient(to bottom, rgba(0, 0, 0, 0.743), #321d5ea1);
@@ -247,7 +246,7 @@ section {
     cursor: pointer;
     font-weight: bold;
 }
-.tab li a:hover {
+.tab > li > a:hover {
     background-color: rgb(233, 235, 173);
 }
 .tabContent {
@@ -261,6 +260,18 @@ section {
     text-align: center;
     font-size: 1.01rem;
     border : 1px solid gray;
+}
+#mgHuongDan .menuXettuyen ul > li, #hocbongtsv .menuXettuyen ul > li, #hocbongkhac .menuXettuyen ul > li {
+    padding : 0;
+    margin : 1rem 0;
+    font-size: 1.01rem;
+    width : 100%;
+    border : none;
+    list-style-type : none;
+    text-align: left;
+}
+#hocbongtsv .menuXettuyen > ul > li, #hocbongkhac .menuXettuyen > ul > li {
+    list-style-type: disc;
 }
 .menuXettuyen ul > li > a {
     display : block;
@@ -307,6 +318,9 @@ table th, table td {
 #luuY ul {
     list-style-type: none;
 }
+#luuY ul li {
+    width : 100%;
+}
 #luuY a {
     color : white;
     font-style: italic;
@@ -323,4 +337,15 @@ table th, table td {
     font-weight: bold;
     background-color: rgb(207, 194, 179);
     box-shadow: -12px -12px -12px rgba(0, 0, 0, 0.15), 10px 10px 10px white;
+}
+#no {
+    display : inline;
+    padding : 0;
+    margin : 0;
+    font-style: italic;
+}
+.menuXettuyen ul > li > a#no:hover {
+    color : unset;
+    font-weight: unset;
+    background-color: unset;
 }

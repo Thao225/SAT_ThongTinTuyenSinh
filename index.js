@@ -78,6 +78,7 @@ window.onload = function () {
         $(this).addClass("active");
         let h = $(this).attr("href");
         $(".tabContent > li").hide();
+        $(".menuContent > .tabContent").hide();
         $(h).show();
     });
     $(".menuXettuyen a ").click(function() {
