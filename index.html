@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="mobile.css">
     <link rel="icon" type="image/x-icon" href="img/icon.png">
-    <script src = "jquery-3.7.1.min.js"></script>
-    <script src = "index.js"></script>
+    <script src = "js/jquery-3.7.1.min.js"></script>
+    <script src = "js/index.js"></script>
     <script src="https://kit.fontawesome.com/4dfce62b7e.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -30,10 +29,10 @@
                     <li class="sub">
                         <a href="#home">Thông tin tuyển sinh</a>
                         <ul class="mucLuc">
-                            <li><a href="#">Phương thức xét tuyển</a></li>
-                            <li><a href="#">Học phí</a></li>
-                            <li><a href="#">Chính sách miễn giảm</a>
-                            </li><li><a href="#">Chương trình học bổng</a></li>
+                            <li><a href="#TuyenSinh">Phương thức xét tuyển</a></li>
+                            <li><a href="#TuyenSinh">Học phí</a></li>
+                            <li><a href="#TuyenSinh">Chính sách miễn giảm</a>
+                            </li><li><a href="#TuyenSinh">Chương trình học bổng</a></li>
                         </ul>
                     </li>
                     <li class="sub">
@@ -82,7 +81,7 @@
             </div>
         </section>
         <section class="pictureAboutUs">
-            <h1>Giới thiệu về trường</h1>
+            <h1  class = "tieude">Giới thiệu về trường</h1>
             <div class="gallery">
                 <div class="listImg flex">
                     <div class="image">
@@ -113,7 +112,7 @@
             </div>
         </section>
         <section class = "noiDungTrang">
-            <h1>Thông tin tuyển sinh </h1>
+            <h1 class = "tieude" id = "TuyenSinh">Thông tin tuyển sinh </h1>
             <div class="tab flex noList">
                 <li><a href = "#ptXettuyen">Phương thức xét tuyển</a></li>
                 <li><a href = "#hocphi">Học phí</a></li>
@@ -1258,7 +1257,7 @@
                                 </h4>
                                 <ul>
                                     <li>Bước 1: Sinh viên nộp hồ sơ online lên trang web trường đã hướng dẫn. </li>
-                                    <li>Bước 2: Nộp các hồ sơ có liên quan theo đường bưu điện cụ thể: Tất cả các sinh viên thuộc đối tượng miễn, giảm học phí phải làm <a id = "no" href = "CAC-MAU-DON-DE-NGHI-MIEN-GIAM-HOC-PHI.docx">“Đơn đề nghị miễn, giảm HP”</a>.</li>
+                                    <li>Bước 2: Nộp các hồ sơ có liên quan theo đường bưu điện cụ thể: Tất cả các sinh viên thuộc đối tượng miễn, giảm học phí phải làm <a id = "no" href = "img/CAC-MAU-DON-DE-NGHI-MIEN-GIAM-HOC-PHI.docx">“Đơn đề nghị miễn, giảm HP”</a>.</li>
                                 </ul>
                                 <ul><h4 class="mota">-Thời gian và địa điểm nộp hồ sơ:</h4>
                                     <li>- Thời gian: từ ngày 18/9/2022 đến hết ngày 30/10/2022</li>
@@ -1444,5 +1443,59 @@
                 </li>
             </div>
         </section>
+        <section class="cuuSv">
+            <h1 class = "tieude">Cựu sinh viên</h1>
+            <div class="gallery">
+                <div class="listImg flex">
+                    <div class="image">
+                        <img src="img/anh1.jpg">
+                        <div class="imgText">Hệ thống cơ sở vật chất hiện đại, đáp ứng tốt nhất nhu cầu học tập và nghiên cứu của sinh viên.</div>
+                    </div>               
+                    <div class="image">
+                        <img src="img/anh2.jpg">
+                        <div class="imgText">Tiên phong trong các nghiên cứu đột phá về vũ trụ, khám phá những bí ẩn của không gian.</div>
+                    </div>
+                    <div class="image">
+                        <img src="img/anh3.jpg">
+                        <div class="imgText">Đột phá trong lĩnh vực công nghệ và khám phá vũ trụ.</div>
+                    </div>               
+                    <div class="image">
+                        <img src="img/anh4.jpg">
+                        <div class="imgText">Chương trình học đa dạng từ cơ bản đến chuyên sâu về kiến thức và kỹ năng thực hành.</div>
+                    </div>
+                </div>
+                <div class="btnGT">
+                    <div class="prev btn"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="next btn"><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+                <div class="chonImg">
+                    <div class="index">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
         
-        </body>
+    </body>
+</body>
+<footer>
+    <section class="thongtin">
+        <div id = "tenAndlogo">
+            <div id = "logo"><img src = "img/icon.png"/></div>
+            <h1>Copyright &copy 2024</h1>
+            <h1>ĐẠI HỌC VŨ TRỤ VÀ CÔNG NGHỆ</h1>
+            <h1>SPACE AND TECHNOLOGY UNIVERSITY (SAT)</h1>
+        </div>
+        <div id = "lienhe">
+            <h2>Thông tin liên hệ : </h2>
+            <p><i class="fa-solid fa-location-dot"></i> Trụ sở : Số 1 Đ. Mạc Đĩnh Chi, Bến Nghé, Quận 1, Hồ Chí Minh</p>
+            <p><i class="fa-solid fa-phone"></i>Hotline : 1900 XXXX</p>
+            <p><i class="fa-regular fa-envelope"></i>Email: satu@.edu.vn</p>
+        </div>
+        <div class = "achievs flex">
+            <i class="fa-solid fa-ranking-star" style = "color:white"></i>
+            <h3>Trường đại học số 1 Việt Nam về <br>Vũ trụ và Công nghệ</br></h3>
+        </div>
+    </section>
+   
+</footer>

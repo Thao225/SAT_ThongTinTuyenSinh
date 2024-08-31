@@ -73,8 +73,10 @@ window.onload = function () {
 
 //---------- NỘI DUNG ---------------------------------------------------------------//
     $(".tabContent > li:not(:first-child)").hide();
-    $(".tab > li > a").click(function() {
+    $(".tab > li > a").click(function(event) {
+        event.preventDefault();
         $(".tab > li > a").removeClass("active");
+        $(".menuXettuyen a").removeClass("activeSub");
         $(this).addClass("active");
         let h = $(this).attr("href");
         $(".tabContent > li").hide();

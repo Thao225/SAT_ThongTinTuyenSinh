@@ -66,13 +66,14 @@ ul.mucLuc>li>a:hover{
 }
 #closeMenu {
     position : absolute;
-    right : 1.5rem;
+    right : 1rem;
     bottom : 5px;
-    padding : 0.7rem;
-    background-color: rgb(138, 86, 144);
+    padding : 0.8rem 1rem;
+    background-color: var(--tim);
     display : none;
-    border : 0.5px solid black;
+    border : 0.5px solid gray;
     font-weight: bold;
+    color : white;
 }
 /* <----------THANH MENU END------------------------> */
 

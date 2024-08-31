@@ -60,6 +60,7 @@
         width : 70%;
         position : relative;
         margin-left: auto;
+        margin-right: 3rem;
     } 
     .sub > ul > li {
         border-bottom : 1px solid lightgray;
@@ -74,14 +75,12 @@
     }
 
 /* <----------ANH GIOI THIEU----------------------> */
-    .pictureAboutUs h1 {
+    .tieude h1 {
         width : 60%;
         margin : 0 auto;
-        color : var(--tim);
         font-size: 1.5rem;
         display : block;
         padding : 5px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.401);
     }
     .gallery {
         width : 200px;
@@ -91,7 +90,6 @@
         width : 100%;
     }
     .listImg .image{
-        /* width : 200px; */
         flex: 0 0 200px;
         height : 100px;
     }
@@ -107,5 +105,17 @@
     .btn {
         padding : 0px;
         font-size : 0.5rem;
+    }
+/* <----------NOI DUNG TRANG----------------------> */
+    .tab > li > a {
+        height : 10rem;
+    }
+    .menuXettuyen ul > li > a {
+        height : 5.5rem;
+        padding :1rem;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        cursor: pointer;
     }
 }
