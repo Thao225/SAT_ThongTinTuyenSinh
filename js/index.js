@@ -15,8 +15,9 @@ window.onload = function () {
 //---------- FO TO TOP --------------------------------------------------------------------//
     let goTop =document.getElementById("gotoTop")
     goTop.onclick = function() {
-        document.documentElement.scrollIntoView({ //dùng để cuộn trang đến một phần tử cụ thể
-            behavior: 'smooth'
+        //cuộn trang đến một phần tử cụ thể mượt hơn
+        document.documentElement.scrollIntoView({ 
+            behavior: 'smooth' 
         });
     }
 
@@ -72,6 +73,33 @@ window.onload = function () {
         }
 
 //---------- NỘI DUNG ---------------------------------------------------------------//
+    let popup = document.getElementById("popup")
+    let x = document.querySelector(".closeBtn")
+    let form = document.querySelector('.formDangKi')
+    x.onclick = function() {
+        popup.classList.add("hide");
+        document.body.style.overflow = '';
+    }
+    document.getElementById("openFormLink").addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn liên kết điều hướng
+        popup.classList.add("hide");
+        form.classList.remove("hide");
+        form.classList.add("show");
+        document.body.style.overflow = 'hidden';
+    });
+    document.querySelector(".btnClose").addEventListener('click', function() {
+        form.classList.add("hide");
+        form.classList.remove("show");
+        document.body.style.overflow = '';
+    });
+
+    document.querySelector(".btnSubmit").addEventListener('click', function() {
+        alert('Đã hoàn tất đăng kí! Kết quả sẽ được thông báo ngày 20/9, chúc bạn may mắn!');
+        form.classList.add("hide");
+        form.classList.remove("show");
+        document.body.style.overflow = '';
+    });
+
     document.querySelectorAll('.faqQuestion').forEach((item) => {
         item.addEventListener('click', () => {
             var faqItem = item.parentElement;
@@ -80,6 +108,7 @@ window.onload = function () {
     });
 
     $(".tabContent > li:not(:first-child)").hide();
+    $(".tab > li:first-child > a").addClass("active");
     $(".tab > li > a").click(function(event) {
         event.preventDefault();
         $(".tab > li > a").removeClass("active");
