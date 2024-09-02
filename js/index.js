@@ -81,7 +81,7 @@ window.onload = function () {
         document.body.style.overflow = '';
     }
     document.getElementById("openFormLink").addEventListener('click', function(event) {
-        event.preventDefault(); // Ngăn liên kết điều hướng
+        event.preventDefault(); 
         popup.classList.add("hide");
         form.classList.remove("hide");
         form.classList.add("show");
@@ -99,7 +99,8 @@ window.onload = function () {
         document.body.style.overflow = '';
     });
     document.getElementById("openForm").addEventListener('click', function(event) {
-        event.preventDefault(); // Ngăn liên kết điều hướng
+        event.preventDefault(); 
+        form.classList.remove("hide");
         form.classList.add("show");
         document.body.style.overflow = 'hidden';
     });
