@@ -124,7 +124,6 @@
     display : block;
     margin: 0 0 0 2.5rem;
     width: 100%;
-
 }
 .contentDK input, .contentDK select {
     width: 100%;
@@ -134,7 +133,6 @@
 .buttonGroup {
     width : 90%;
 }
-
 .menuXettuyen ul > li > a {
     height : 5.5rem;
     padding :1rem;
