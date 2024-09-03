@@ -81,7 +81,12 @@
     #flySpace {
         display : none;
     }
-
+    .dauTrang h1 {
+        display : block;
+        padding : 10px;
+        margin : 0 auto;
+        font-size : 1.5rem;
+    }
 /* <----------ANH GIOI THIEU----------------------> */
     .tieude h1 {
         width : 60%;
@@ -202,10 +207,15 @@
     .faq {
         width: 80%;
     }
+    h1.tieude {
+        font-size: 1.5rem;
+        text-align: center;
+        padding : 10px;
+        margin : 0 auto 0.5rem;
+        width : 90%;
+        line-height: 2rem;
+    }
    
-
-      
-
 /* <----------FOOTER----------------------> */
     footer {
         flex-direction: column;
