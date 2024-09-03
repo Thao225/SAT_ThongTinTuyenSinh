@@ -151,11 +151,11 @@ footer a{
 .tenNoiDungFooter{
     padding-top : 12px;
     margin-left: 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 .noiDungNhoFooter, .noiDungNhoFooter a{
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding : 0;
 }
 .phanCuoi>span{
