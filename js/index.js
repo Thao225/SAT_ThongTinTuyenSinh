@@ -117,7 +117,6 @@ window.onload = function () {
         $(".menuContent > .tabContent").hide();
         $(h).show();
     });
-    console.log("check1")
     $(".menuXettuyen a ").click(function() {
         $(".menuXettuyen a ").removeClass("activeSub");
         $(this).addClass("activeSub");
@@ -125,24 +124,14 @@ window.onload = function () {
         $(".menuContent > .tabContent").hide();
         $(hh).show();
     });
-    console.log("check2")
     $(".mucLuc a").click(function() {
         let tabCon = $(this).attr("href");
         $(".tab > li > a").removeClass("active");
         $(".tab > li > a[href='" + tabCon + "']").addClass("active");
         $(".tabContent > li").hide();
         $(tabCon).show();
-    console.log("check3")
         $('html').animate({
             scrollTop: $(tabCon).offset().top - 320
         }, 500);
     });
-
-
-
-
-
-
-
-
 }
