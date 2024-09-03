@@ -1,16 +1,4 @@
-window.onscroll = function() {
-//---------- HIỆU ỨNG CHO THANH MENU KHI TRƯỢT TRANG -----------------------------------------------------------//
-const stickymenu = document.querySelector(".sticky");
-const scrollY = window.scrollY; //số pixel đã được cuộn dọc theo trục Y
-console.log(scrollY);
-    if (scrollY > 0) {
-        stickymenu.style.opacity = 0.85; 
-    } 
-    else {
-        stickymenu.style.opacity = 1; 
-    }
-}
- 
+
 window.onload = function () {
 //---------- FO TO TOP --------------------------------------------------------------------//
     let goTop =document.getElementById("gotoTop")
@@ -26,11 +14,16 @@ window.onload = function () {
     let thanhMenu = document.querySelector(".thanhmenu")
     btn.onclick = function () {
         thanhMenu.classList.toggle("show");
+        document.documentElement.scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+
     }
     let closemenu = document.getElementById("closeMenu")
     closemenu.onclick = function () {
         thanhMenu.classList.remove("show");
     } 
+
 //---------- ẢNH GIỚI THIỆU ---------------------------------------------------------------//
     let listImg = document.querySelector(".listImg")
     let imageGT = document.querySelectorAll(".gallery .image")
@@ -124,14 +117,25 @@ window.onload = function () {
         $(".menuContent > .tabContent").hide();
         $(h).show();
     });
-
+    console.log("check1")
     $(".menuXettuyen a ").click(function() {
-        console.log("hi")
         $(".menuXettuyen a ").removeClass("activeSub");
         $(this).addClass("activeSub");
         let hh = $(this).attr("href");
         $(".menuContent > .tabContent").hide();
         $(hh).show();
+    });
+    console.log("check2")
+    $(".mucLuc a").click(function() {
+        let tabCon = $(this).attr("href");
+        $(".tab > li > a").removeClass("active");
+        $(".tab > li > a[href='" + tabCon + "']").addClass("active");
+        $(".tabContent > li").hide();
+        $(tabCon).show();
+    console.log("check3")
+        $('html').animate({
+            scrollTop: $(tabCon).offset().top - 320
+        }, 500);
     });
 
 
