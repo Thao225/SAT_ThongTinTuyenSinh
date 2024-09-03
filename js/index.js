@@ -1,6 +1,6 @@
 
 window.onload = function () {
-//---------- FO TO TOP --------------------------------------------------------------------//
+//---------- GO TO TOP --------------------------------------------------------------------//
     let goTop =document.getElementById("gotoTop")
     goTop.onclick = function() {
         //cuộn trang đến một phần tử cụ thể mượt hơn
