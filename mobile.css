@@ -164,6 +164,13 @@
         text-align: center;
         margin-top: 5px;
     }
+    .veChungToi {
+        display : flex;
+        gap : 5px;
+    }
+    .veChungToi > li > a {
+        display : block;
+    }
     .phanCuoi > span {
         text-align: center;
         margin-top: 1.5rem;
