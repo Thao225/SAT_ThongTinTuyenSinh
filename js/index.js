@@ -27,7 +27,7 @@ window.onload = function () {
 //---------- ẢNH GIỚI THIỆU ---------------------------------------------------------------//
     let listImg = document.querySelector(".listImg")
     let imageGT = document.querySelectorAll(".gallery .image")
-    let gallery = document.querySelector(".gallery")
+    let gallery = document.querySelectorAll(".gallery")
     var current = 0;
     var w = gallery.offsetWidth;
     console.log(w);
