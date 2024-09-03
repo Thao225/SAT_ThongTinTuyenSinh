@@ -10,24 +10,21 @@ window.onload = function () {
     }
 
 //---------- RESPONSIVE THANHMENU -----------------------------------------------------------//
+    
+    const sidebarMenu = document.getElementById('sidebarMenu');
     let btn = document.querySelector("#menuBtn")
-    let thanhMenu = document.querySelector(".thanhmenu")
-    btn.onclick = function () {
-        thanhMenu.classList.toggle("show");
-        document.documentElement.scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-
-    }
+    btn.addEventListener('click', function() {
+        sidebarMenu.classList.toggle('show');
+    });
     let closemenu = document.getElementById("closeMenu")
     closemenu.onclick = function () {
-        thanhMenu.classList.remove("show");
+        sidebarMenu.classList.remove("show");
     } 
 
 //---------- ẢNH GIỚI THIỆU ---------------------------------------------------------------//
     let listImg = document.querySelector(".listImg")
     let imageGT = document.querySelectorAll(".gallery .image")
-    let gallery = document.querySelectorAll(".gallery")
+    let gallery = document.querySelector(".gallery")
     var current = 0;
     var w = gallery.offsetWidth;
     console.log(w);

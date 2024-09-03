@@ -17,15 +17,54 @@
     }
     
 /* <----------THANH MENU-----------------------> */
-    .thanhmenu {
-        display : none;
-        width : 100vw;
+    #sidebarMenu {
+        position: fixed;
+        right: -100%; 
+        top: 0;
+        height: 60%;
+        width: 50%;
+        flex-direction: column;
+        transition: left 0.3s ease;
+        z-index: 9999;
+        font-size: 1rem;
+    }
+    .mucLucs ul.mucLucs {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .mucLucs ul.mucLucs li {
+        width: 100%;
+    }
+    .mucLucs ul.mucLucs li a {
+        display: block;
+        padding: 8px;
+        margin-left: 15px;
+    }
+    .mucLuc li {
+        margin : 10px;
+    }
+    
+    .mucLuc > li > a {
+        border-bottom : 1px solid lightgray;
         margin : 0;
-        position : relative;
-        transition: 2s ease-out;;
-    } 
+        padding : 10px;
+        font-size: 0.8rem;
+        width : 100%;
+    }
     .logoTruong {
-        display : none;
+        display: none; 
+    }
+    #sidebarMenu.show {
+        right: 0;
+    }
+    #closeMenu {
+        display: block;
+        padding: 5px 10px;
+        cursor: pointer;
+        color: white;
+        text-align: right;
     }
     .menuDt {
         display : block; 
@@ -59,22 +98,6 @@
         font-size: 20px;
         font-weight: 500;
         padding : 5px;
-    }
-    .mucLucs {
-        flex-direction: column;
-        position : relative;
-    }
-    .sub > ul {
-        width : 70%;
-        position : relative;
-        margin-left: auto;
-        margin-right: 3rem;
-    } 
-    .sub > ul > li {
-        border-bottom : 1px solid lightgray;
-    }
-    #closeMenu {
-        display : block;
     }
 
 /* <----------DAU TRANG----------------------> */
