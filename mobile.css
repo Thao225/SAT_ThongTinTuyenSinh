@@ -111,13 +111,6 @@
         font-size : 1.5rem;
     }
 /* <----------ANH GIOI THIEU----------------------> */
-    .tieude h1 {
-        width : 60%;
-        margin : 0 auto;
-        font-size: 1.2rem;
-        display : block;
-        padding : 5px;
-    }
     .gallery {
         width : 300px;
         margin : 0 auto;
