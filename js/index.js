@@ -70,30 +70,6 @@ window.onload = function () {
         popup.classList.add("hide");
         document.body.style.overflow = '';
     }
-    // document.getElementById("openFormLink").addEventListener('click', function(event) {
-    //     event.preventDefault(); 
-    //     popup.classList.add("hide");
-    //     form.classList.remove("hide");
-    //     form.classList.add("show");
-    //     document.body.style.overflow = 'hidden';
-    // });
-    // document.querySelector(".btnClose").addEventListener('click', function() {
-    //     form.classList.add("hide");
-    //     form.classList.remove("show");
-    //     document.body.style.overflow = '';
-    // });
-    // document.querySelector(".btnSubmit").addEventListener('click', function() {
-    //     alert('Đã hoàn tất đăng kí! Kết quả sẽ được thông báo ngày 20/9, chúc bạn may mắn!');
-    //     form.classList.add("hide");
-    //     form.classList.remove("show");
-    //     document.body.style.overflow = '';
-    // });
-    // document.getElementById("openForm").addEventListener('click', function(event) {
-    //     event.preventDefault(); 
-    //     form.classList.remove("hide");
-    //     form.classList.add("show");
-    //     document.body.style.overflow = 'hidden';
-    // });
 
     document.querySelectorAll('.faqQuestion').forEach((item) => {
         item.addEventListener('click', () => {
@@ -132,3 +108,16 @@ window.onload = function () {
         }, 500);
     });
 }
+window.addEventListener('scroll', function () {
+    let moon = document.getElementById('moon');
+    let text = document.getElementById('text');
+    let tau = document.getElementById('tau');
+    let star = document.getElementById('star');
+    let value = window.scrollY;
+    moon.style.left = value *0.4 + 'px';
+    moon.style.transform = 'scale(' + value * 0.002 + ')';
+    text.style.top = -value *0.2 + 'px';
+    tau.style.left = value *0.4 + 'px';
+    tau.style.transform = 'scale(' + value * 0.002 + ')';
+    star.style.top = value * 0.5 + 'px'; 
+}); 

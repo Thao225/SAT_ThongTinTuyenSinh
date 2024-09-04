@@ -5,6 +5,27 @@
         box-sizing: border-box;
         font-size : 14px;
     }
+    .dauTrang img {
+        height : auto;
+    }
+    .animation {
+        height : 400px;
+    }
+    #bg {
+        height : 400px;
+    }
+    .animation img {
+        position: absolute;
+        width : 100%;
+    }
+    #text {
+        position : relative;
+        color : white;
+        z-index: 1;
+        font-size : 1.5rem;
+        text-align: center;
+    }
+    
 }
 @media screen and (max-width : 767px) {
     * {
@@ -185,6 +206,15 @@
         padding : 10px;
         margin : 0 auto;
         font-size : 1.5rem;
+    }
+    .dauTrang img {
+        height : auto;
+    }
+    .animation {
+        height : 300px;
+    }
+    #bg {
+        height : 300px;
     }
 /* <----------ANH GIOI THIEU----------------------> */
     .gallery {
