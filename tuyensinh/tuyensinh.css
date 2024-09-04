@@ -8,11 +8,11 @@
     background-color: #b567cd;
     padding: 20px;
     border-radius: 10px;
-    width: 500px;
     width: 90%;
     box-sizing: border-box;
     border : 1px solid black;
     margin : 0 auto;
+
 }
 .formDangKi header h1 {
     text-align: center;
@@ -50,7 +50,6 @@
     padding: 5px;
     margin-top: 5px;
     box-sizing: border-box;
-    margin-left: 2.9rem;    
 }
 .buttonGroup {
     width : 50%;
