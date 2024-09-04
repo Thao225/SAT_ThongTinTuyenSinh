@@ -65,35 +65,35 @@ window.onload = function () {
 //---------- NỘI DUNG ---------------------------------------------------------------//
     let popup = document.getElementById("popup")
     let x = document.querySelector(".closeBtn")
-    let form = document.querySelector('.formDangKi')
+    // let form = document.querySelector('.formDangKi')
     x.onclick = function() {
         popup.classList.add("hide");
         document.body.style.overflow = '';
     }
-    document.getElementById("openFormLink").addEventListener('click', function(event) {
-        event.preventDefault(); 
-        popup.classList.add("hide");
-        form.classList.remove("hide");
-        form.classList.add("show");
-        document.body.style.overflow = 'hidden';
-    });
-    document.querySelector(".btnClose").addEventListener('click', function() {
-        form.classList.add("hide");
-        form.classList.remove("show");
-        document.body.style.overflow = '';
-    });
-    document.querySelector(".btnSubmit").addEventListener('click', function() {
-        alert('Đã hoàn tất đăng kí! Kết quả sẽ được thông báo ngày 20/9, chúc bạn may mắn!');
-        form.classList.add("hide");
-        form.classList.remove("show");
-        document.body.style.overflow = '';
-    });
-    document.getElementById("openForm").addEventListener('click', function(event) {
-        event.preventDefault(); 
-        form.classList.remove("hide");
-        form.classList.add("show");
-        document.body.style.overflow = 'hidden';
-    });
+    // document.getElementById("openFormLink").addEventListener('click', function(event) {
+    //     event.preventDefault(); 
+    //     popup.classList.add("hide");
+    //     form.classList.remove("hide");
+    //     form.classList.add("show");
+    //     document.body.style.overflow = 'hidden';
+    // });
+    // document.querySelector(".btnClose").addEventListener('click', function() {
+    //     form.classList.add("hide");
+    //     form.classList.remove("show");
+    //     document.body.style.overflow = '';
+    // });
+    // document.querySelector(".btnSubmit").addEventListener('click', function() {
+    //     alert('Đã hoàn tất đăng kí! Kết quả sẽ được thông báo ngày 20/9, chúc bạn may mắn!');
+    //     form.classList.add("hide");
+    //     form.classList.remove("show");
+    //     document.body.style.overflow = '';
+    // });
+    // document.getElementById("openForm").addEventListener('click', function(event) {
+    //     event.preventDefault(); 
+    //     form.classList.remove("hide");
+    //     form.classList.add("show");
+    //     document.body.style.overflow = 'hidden';
+    // });
 
     document.querySelectorAll('.faqQuestion').forEach((item) => {
         item.addEventListener('click', () => {

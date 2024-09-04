@@ -220,7 +220,7 @@
     .popup p, .popup a {
         font-size: 1rem;
     }
-    .contentDK {
+    /* .contentDK {
         flex-direction: column;
         gap: 5px;
         width : 90%;
@@ -237,7 +237,7 @@
     }
     .buttonGroup {
         width : 90%;
-    }
+    } */
     .menuXettuyen ul > li > a {
         height : 5.5rem;
         padding :1rem;
