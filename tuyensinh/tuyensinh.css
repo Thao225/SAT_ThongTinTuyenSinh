@@ -114,22 +114,25 @@ a {
     text-align: center;
 }
 @media screen and (max-width : 767px) {
-.contentDK {
-    flex-direction: column;
-    gap: 5px;
-    width : 90%;
-} 
-.formDangKi .contentDK p {
-    display : block;
-    margin: 0 0 0 10px;
-    width: 100%;
-}
-.contentDK input, .contentDK select {
-    width: 100%;
-    display : block;
-    margin: 0 !important; 
-}
-.buttonGroup {
-    width : 90%;
-}
+    .contentDK {
+        flex-direction: column;
+        gap: 5px;
+        width : 90%;
+    } 
+    .formDangKi .contentDK p {
+        display : block;
+        margin: 0 0 0 10px;
+        width: 100%;
+    }
+    .contentDK input, .contentDK select {
+        width: 100%;
+        display : block;
+        margin: 0 !important; 
+    }
+    .buttonGroup {
+        width : 90%;
+    }
+    .btnSubmit > a, .btnClose > a {
+        padding : 10px;
+    }
 }
