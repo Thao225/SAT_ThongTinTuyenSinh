@@ -41,8 +41,8 @@
     #sidebarMenu {
         position: fixed;
         right: -100%; 
-        top: 0;
-        height: 60%;
+        top: 48px;
+        height: 50%;
         width: 50%;
         flex-direction: column;
         transition: left 0.3s ease;
