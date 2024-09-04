@@ -17,15 +17,54 @@
     }
     
 /* <----------THANH MENU-----------------------> */
-    .thanhmenu {
-        display : none;
-        width : 100vw;
+    #sidebarMenu {
+        position: fixed;
+        right: -100%; 
+        top: 0;
+        height: 60%;
+        width: 50%;
+        flex-direction: column;
+        transition: left 0.3s ease;
+        z-index: 9999;
+        font-size: 1rem;
+    }
+    .mucLucs ul.mucLucs {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .mucLucs ul.mucLucs li {
+        width: 100%;
+    }
+    .mucLucs ul.mucLucs li a {
+        display: block;
+        padding: 8px;
+        margin-left: 15px;
+    }
+    .mucLuc li {
+        margin : 10px;
+    }
+    
+    .mucLuc > li > a {
+        border-bottom : 1px solid lightgray;
         margin : 0;
-        position : relative;
-        transition: 2s ease-out;;
-    } 
+        padding : 10px;
+        font-size: 0.8rem;
+        width : 100%;
+    }
     .logoTruong {
-        display : none;
+        display: none; 
+    }
+    #sidebarMenu.show {
+        right: 0;
+    }
+    #closeMenu {
+        display: block;
+        padding: 5px 10px;
+        cursor: pointer;
+        color: white;
+        text-align: right;
     }
     .menuDt {
         display : block; 
@@ -60,21 +99,81 @@
         font-weight: 500;
         padding : 5px;
     }
-    .mucLucs {
+
+/* <----------FOOTER----------------------> */
+    .footer {
+        width: 100%;
+        padding: 10px;
+    }
+    .phanDau {
         flex-direction: column;
-        position : relative;
+        align-items: center;
+        margin: 1rem 0;
     }
-    .sub > ul {
-        width : 70%;
-        position : relative;
-        margin-left: auto;
-        margin-right: 3rem;
-    } 
-    .sub > ul > li {
-        border-bottom : 1px solid lightgray;
+    .logoTruongFooter {
+        margin-bottom: 1rem;
+        text-align: center;
     }
-    #closeMenu {
+    #truongFooter {
+        width: 70%;
+    }
+    .iconLienHe {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .iconLienHe ul {
+        justify-content: center;
+        padding: 0;
+    }
+    .iconLienHe ul li {
+        font-size: 20px; 
+    }
+    .phanGiua {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+    .noidungFooters {
+        width: 100%; 
+        margin-bottom: 1.5rem;
+    }
+    .noidungFooters:first-child, .noidungFooters:nth-child(2){
+        width: 100%;
+    }
+    .noiDungFooter > div {
+        padding : 0px;
+        margin : 0;
+    }
+    li.noiDungFooter {
+        margin : 0;
+    }
+    .tieuDeNDF {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .thongtinNDF li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .tenNoiDungFooters {
+        justify-content: center;
+    }
+    .noiDungNhoFooter {
+        text-align: center;
+        margin-top: 5px;
+    }
+    .veChungToi {
+        display : flex;
+        gap : 5px;
+    }
+    .veChungToi > li > a {
         display : block;
+    }
+    .phanCuoi > span {
+        text-align: center;
+        margin-top: 1.5rem;
     }
 
 /* <----------DAU TRANG----------------------> */
@@ -88,13 +187,6 @@
         font-size : 1.5rem;
     }
 /* <----------ANH GIOI THIEU----------------------> */
-    .tieude h1 {
-        width : 60%;
-        margin : 0 auto;
-        font-size: 1.2rem;
-        display : block;
-        padding : 5px;
-    }
     .gallery {
         width : 300px;
         margin : 0 auto;
@@ -128,7 +220,7 @@
     .popup p, .popup a {
         font-size: 1rem;
     }
-    .contentDK {
+    /* .contentDK {
         flex-direction: column;
         gap: 5px;
         width : 90%;
@@ -145,7 +237,7 @@
     }
     .buttonGroup {
         width : 90%;
-    }
+    } */
     .menuXettuyen ul > li > a {
         height : 5.5rem;
         padding :1rem;
@@ -214,23 +306,5 @@
         margin : 0 auto 0.5rem;
         width : 90%;
         line-height: 2rem;
-    }
-   
-/* <----------FOOTER----------------------> */
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
-    .socialMedia {
-        margin-top: 20px;
-    }
-    .socialMedia > a {
-        border-radius: 5px;
-    }
-    #lienhe {
-        text-align: center;
-    }
-    .achievs {
-        justify-content: center;
     }
 }

@@ -10,18 +10,15 @@ window.onload = function () {
     }
 
 //---------- RESPONSIVE THANHMENU -----------------------------------------------------------//
+    
+    const sidebarMenu = document.getElementById('sidebarMenu');
     let btn = document.querySelector("#menuBtn")
-    let thanhMenu = document.querySelector(".thanhmenu")
-    btn.onclick = function () {
-        thanhMenu.classList.toggle("show");
-        document.documentElement.scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-
-    }
+    btn.addEventListener('click', function() {
+        sidebarMenu.classList.toggle('show');
+    });
     let closemenu = document.getElementById("closeMenu")
     closemenu.onclick = function () {
-        thanhMenu.classList.remove("show");
+        sidebarMenu.classList.remove("show");
     } 
 
 //---------- ẢNH GIỚI THIỆU ---------------------------------------------------------------//
@@ -68,35 +65,35 @@ window.onload = function () {
 //---------- NỘI DUNG ---------------------------------------------------------------//
     let popup = document.getElementById("popup")
     let x = document.querySelector(".closeBtn")
-    let form = document.querySelector('.formDangKi')
+    // let form = document.querySelector('.formDangKi')
     x.onclick = function() {
         popup.classList.add("hide");
         document.body.style.overflow = '';
     }
-    document.getElementById("openFormLink").addEventListener('click', function(event) {
-        event.preventDefault(); 
-        popup.classList.add("hide");
-        form.classList.remove("hide");
-        form.classList.add("show");
-        document.body.style.overflow = 'hidden';
-    });
-    document.querySelector(".btnClose").addEventListener('click', function() {
-        form.classList.add("hide");
-        form.classList.remove("show");
-        document.body.style.overflow = '';
-    });
-    document.querySelector(".btnSubmit").addEventListener('click', function() {
-        alert('Đã hoàn tất đăng kí! Kết quả sẽ được thông báo ngày 20/9, chúc bạn may mắn!');
-        form.classList.add("hide");
-        form.classList.remove("show");
-        document.body.style.overflow = '';
-    });
-    document.getElementById("openForm").addEventListener('click', function(event) {
-        event.preventDefault(); 
-        form.classList.remove("hide");
-        form.classList.add("show");
-        document.body.style.overflow = 'hidden';
-    });
+    // document.getElementById("openFormLink").addEventListener('click', function(event) {
+    //     event.preventDefault(); 
+    //     popup.classList.add("hide");
+    //     form.classList.remove("hide");
+    //     form.classList.add("show");
+    //     document.body.style.overflow = 'hidden';
+    // });
+    // document.querySelector(".btnClose").addEventListener('click', function() {
+    //     form.classList.add("hide");
+    //     form.classList.remove("show");
+    //     document.body.style.overflow = '';
+    // });
+    // document.querySelector(".btnSubmit").addEventListener('click', function() {
+    //     alert('Đã hoàn tất đăng kí! Kết quả sẽ được thông báo ngày 20/9, chúc bạn may mắn!');
+    //     form.classList.add("hide");
+    //     form.classList.remove("show");
+    //     document.body.style.overflow = '';
+    // });
+    // document.getElementById("openForm").addEventListener('click', function(event) {
+    //     event.preventDefault(); 
+    //     form.classList.remove("hide");
+    //     form.classList.add("show");
+    //     document.body.style.overflow = 'hidden';
+    // });
 
     document.querySelectorAll('.faqQuestion').forEach((item) => {
         item.addEventListener('click', () => {

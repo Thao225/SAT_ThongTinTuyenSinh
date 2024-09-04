@@ -152,15 +152,6 @@ section {
     width : 100%;
     margin : 0 auto;
 }
-.tieude h1 {
-    width : 60%;
-    margin : 0 auto;
-    color : white;
-    font-size: 1.8rem;
-    display : block;
-    padding : 50px 20px 20px;
-    border-bottom: 2px solid rgba(244, 235, 235, 0.401);
-}
 .gallery {
     width: 100%;
     max-width: 800px;
